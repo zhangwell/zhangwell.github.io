@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="computer network," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="引言   记录慕课网《剑指offer》课程中计算机网络部分面试知识 面试问题记录，涉及的较少">
+<meta name="keywords" content="computer network">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ComputerNetworks">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;ComputerNetworks&#x2F;index.html">
+<meta property="og:site_name" content="Well">
+<meta property="og:description" content="引言   记录慕课网《剑指offer》课程中计算机网络部分面试知识 面试问题记录，涉及的较少">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;ComputerNetworks&#x2F;image-20191122201138746.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;ComputerNetworks&#x2F;image-20191122201724700.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;ComputerNetworks&#x2F;image-20191122204017097.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;ComputerNetworks&#x2F;1566261217747.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;ComputerNetworks&#x2F;1566261228418-1574427053238.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;ComputerNetworks&#x2F;1566261278901.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;ComputerNetworks&#x2F;1566261373431.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;ComputerNetworks&#x2F;image-20191122205849513.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;ComputerNetworks&#x2F;1566261538473.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;ComputerNetworks&#x2F;1566261644094.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;ComputerNetworks&#x2F;1566261699701.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;ComputerNetworks&#x2F;image-20191122210015905.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;ComputerNetworks&#x2F;image-20191122210051958.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;ComputerNetworks&#x2F;1566261798658.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;ComputerNetworks&#x2F;1566261805698.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;m.qpic.cn&#x2F;psb?&#x2F;V11tv2Vw2h2WsJ&#x2F;NwMQ9mez*i97f2u6JhqrOh14XAag318f8TuAngEDQ8w!&#x2F;b&#x2F;dL8AAAAAAAAA&amp;bo=eQJYAXkCWAEDKQw!&amp;rf=viewer_4">
+<meta property="og:image" content="http:&#x2F;&#x2F;m.qpic.cn&#x2F;psb?&#x2F;V11tv2Vw2h2WsJ&#x2F;8Mtws13i04*MNhxm7c6NUQukdKULAlH2ajFaBni3uZc!&#x2F;b&#x2F;dDQBAAAAAAAA&amp;bo=YQPbAGED2wADGTw!&amp;rf=viewer_4">
+<meta property="og:image" content="http:&#x2F;&#x2F;m.qpic.cn&#x2F;psb?&#x2F;V11tv2Vw2h2WsJ&#x2F;krh8m5lpufZU6OX9enXcVdQrVltJTku3irYOENXzFxM!&#x2F;b&#x2F;dFMBAAAAAAAA&amp;bo=1AI.AtQCPgIDKQw!&amp;rf=viewer_4">
+<meta property="og:image" content="http:&#x2F;&#x2F;m.qpic.cn&#x2F;psb?&#x2F;V11tv2Vw2h2WsJ&#x2F;08ikSdkksqhIeEzyW6wrL6*jbSfpvdT2Kr.BKbEOhO4!&#x2F;b&#x2F;dDMBAAAAAAAA&amp;bo=SQOpBEkDqQQDSWw!&amp;rf=viewer_4">
+<meta property="og:image" content="http:&#x2F;&#x2F;m.qpic.cn&#x2F;psb?&#x2F;V11tv2Vw2h2WsJ&#x2F;mkJaDOUBzk87ThnK15P3txuYPndh*ZE.fSG4NT7DD0c!&#x2F;b&#x2F;dL4AAAAAAAAA&amp;bo=kALdAJAC3QADCSw!&amp;rf=viewer_4">
+<meta property="og:image" content="http:&#x2F;&#x2F;m.qpic.cn&#x2F;psb?&#x2F;V11tv2Vw2h2WsJ&#x2F;zJyJco59whskn9W9AoddItbQ6kJgG.hSY470evBfB2A!&#x2F;b&#x2F;dL8AAAAAAAAA&amp;bo=wAILAcACCwEDGTw!&amp;rf=viewer_4">
+<meta property="og:updated_time" content="2019-11-22T13:31:08.241Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;22&#x2F;ComputerNetworks&#x2F;image-20191122201138746.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/11/22/ComputerNetworks/"/>
+
+
+
+
+
+  <title>ComputerNetworks | Well</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Well</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/22/ComputerNetworks/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Well">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ComputerNetworks</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-22T19:17:41+08:00">
+                2019-11-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/" itemprop="url" rel="index">
+                    <span itemprop="name">面试总结</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>引言</p>
+<blockquote>
+<ol>
+<li>记录慕课网《剑指offer》课程中计算机网络部分面试知识</li>
+<li>面试问题记录，涉及的较少</li>
+</ol>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="计算机网络体系结构"><a href="#计算机网络体系结构" class="headerlink" title="计算机网络体系结构"></a>计算机网络体系结构</h2><p> <img src="/2019/11/22/ComputerNetworks/image-20191122201138746.png" alt="image-20191122201138746"> </p>
+<h3 id="OSI"><a href="#OSI" class="headerlink" title="OSI"></a>OSI</h3><ul>
+<li><p>物理层：两台物理机器之间传输比特流，定义物理设备的标准，网卡</p>
+</li>
+<li><p>数据链路层：在传输比特流的过程会产生各种错误，数据链路层应运而生，该层定义了如何格式化数据以进行传输以及控制对物理介质的访问，还提供错误检测和纠正。该层将比特数据组成帧，交换机工作在该层，对帧解码，根据帧中的数据将信息发送到正确的接收方。</p>
+</li>
+</ul>
+<blockquote>
+<p>随着网络节点的增加，点对点间的通信是需要经过多个节点的，如何找到目标节点，如何选择最佳路径是首要需求，此时产生网络层</p>
+</blockquote>
+<ul>
+<li>网络层：其主要功能是将网络地址翻译成对应的物理地址，并决定如何将数据从发送方路由到接收方。发送方综合考虑发送优先权、网络拥塞、服务质量、可选路由的花费决定从网络中一个节点A到另一个网络中B的最佳路径，网络层处理并智能指导数据传送，路由器连接网络各端，所以路由器属于网络层。此层的数据称为数据包。本层关注TCP/IP协议中的IP协议。</li>
+</ul>
+<blockquote>
+<p>随着网络通信需求的进一步扩大，通信过程中需要发送大量数据，可能需要很长时间，网络在通信过程会中断多次，此时为了保证传输文件的准确性，需要对发出去的数据进行切分，切为数据段。当发生数据段络丢失，失序等情况时，传输层应运而生。</p>
+</blockquote>
+<ul>
+<li>传输层：解决主机间的数据传输，和传输质量问题。该层传输协议进行流量控制或是基于接收方可接受数据的快慢程度规定适当的发送速率。同时分割数据包以适应在网络上传输（以太网无法接受大于1500字节的数据包），分割数据为数据片，同时在数据片上给定序号，以便接受时可按序排组。需要关注TCP和UDP协议。</li>
+</ul>
+<blockquote>
+<p>为了不用用户级不要每次调用TCP打包数据，IP协议去寻找路由，现在需要自动收发包，自动寻址的功能，会话层应运而生</p>
+</blockquote>
+<ul>
+<li>会话层：作用是建立和管理应用程序之间的通信。至此可以保证用用程序能够自动收发包和寻址。</li>
+</ul>
+<blockquote>
+<p>考虑各应用程序的环境不同，如window和Linux之间的差异，需要表示层来消除</p>
+</blockquote>
+<ul>
+<li>表示层：解决不同系统之间的通信语法的问题，该层数据将按照网络能够理解的方式进行格式化。此时完成数据转化成相应的字节。</li>
+</ul>
+<blockquote>
+<p>此时发送方知道发送的数据是什么，转换成字节数据有多长，但接收方并不知道，为了发送方和接收方能够理解传输字节的含义，应用层网络协议诞生</p>
+</blockquote>
+<ul>
+<li>应用层：应用层网络协议规定消息发送方和接收方必须使用一个固定长度的一个消息头，消息头必须是固定组成，记录各种信息以方便接收方解析。该层旨在让你能够更方便的从网络中接受数据，没有该层也可以在两台主机间传递，但是我们能了解的就是一堆0101编码的字节数组。需要关注TCP/IP协议中的HTTP协议。</li>
+</ul>
+<p>这是一个框架来协调和组织各层所提供的服务，但是该模型仅是概念模型，来协调进程间通信标准的制定。实际的实现是TCP/IP协议。</p>
+<h3 id="五层协议"><a href="#五层协议" class="headerlink" title="五层协议"></a>五层协议</h3><ul>
+<li><strong>应用层</strong> ：为特定应用程序提供数据传输服务，例如 HTTP、DNS 等。数据单位为报文。</li>
+<li><strong>传输层</strong> ：为进程提供通用数据传输服务。由于应用层协议很多，定义通用的传输层协议就可以支持不断增多的应用层协议。运输层包括两种协议：传输控制协议 TCP，提供面向连接、可靠的数据传输服务，数据单位为报文段；用户数据报协议 UDP，提供无连接、尽最大努力的数据传输服务，数据单位为用户数据报。TCP 主要提供完整性服务，UDP 主要提供及时性服务。</li>
+<li><strong>网络层</strong> ：为主机提供数据传输服务。而传输层协议是为主机中的进程提供数据传输服务。网络层把传输层传递下来的报文段或者用户数据报封装成分组。</li>
+<li><strong>数据链路层</strong> ：网络层针对的还是主机之间的数据传输服务，而主机之间可以有很多链路，链路层协议就是为同一链路的主机提供数据传输服务。数据链路层把网络层传下来的分组封装成帧。</li>
+<li><strong>物理层</strong> ：考虑的是怎样在传输媒体上传输数据比特流，而不是指具体的传输媒体。物理层的作用是尽可能屏蔽传输媒体和通信手段的差异，使数据链路层感觉不到这些差异。</li>
+</ul>
+<h3 id="TCP-IP"><a href="#TCP-IP" class="headerlink" title="TCP/IP"></a>TCP/IP</h3><p>它只有四层，相当于五层协议中数据链路层和物理层合并为网络接口层。</p>
+<p>TCP/IP 体系结构不严格遵循 OSI 分层概念，应用层可能会直接使用 IP 层或者网络接口层。</p>
+<p> TCP/IP 是 Internet上的标准通信协议集，该协议集由数十个具有层次结构的协议组成，其中 TCP 和 IP 是该协议集中的两个最重要的核心协议。TCP/IP协议族按层次可分为以下四层：应用层、传输层、网络层和网络接口层，各层对应的 PDU 数据单元的名称如下图所示。 </p>
+<p><img src="/2019/11/22/ComputerNetworks/image-20191122201724700.png" alt="image-20191122201724700"></p>
+<h2 id="TCP的三次握手"><a href="#TCP的三次握手" class="headerlink" title="TCP的三次握手"></a>TCP的三次握手</h2><h3 id="传输控制协议-TCP-简介"><a href="#传输控制协议-TCP-简介" class="headerlink" title="传输控制协议 TCP 简介"></a>传输控制协议 TCP 简介</h3><ul>
+<li>面向连接的、可靠的基于字节流的传输层通信协议</li>
+<li>将应用层的数据流分割成报文段并发送给目标节点的 TCP 层</li>
+<li>数据包都是由序号，对方收到则发送 ACK 确认，未收到则重传</li>
+<li>使用校验和来检验数据在传输过程中是否有误</li>
+</ul>
+<p>IP协议是无连接的协议，他不会占用两个正在通信的计算机之间的通信线路，这样IP就降低了对网络线路的需求每条线可以同时满足许多不同计算机之间的通信需要。通过IP协议，消息或者其他数据会被分割为较小的包，并通过因特网在计算机之间传送，IP负责将每个包路由至他的目的地，但是IP协议未作任何事来确认数据包是否安全到达，所以他是不可靠的，需要他的上层协议来控制。传输控制协议TCP是传输层的协议。（简介）</p>
+<h3 id="TCP-报文头"><a href="#TCP-报文头" class="headerlink" title="TCP 报文头"></a>TCP 报文头</h3><p><img src="/2019/11/22/ComputerNetworks/image-20191122204017097.png" alt="image-20191122204017097"></p>
+<ul>
+<li><strong>源端口、目的端口</strong> ：各2个字节，TCP/UDP都是不包含IP地址信息的，两者头部都会有端口号，这是在传输层范畴的知识。两个进程在计算机内部进行通信可以有：管道、内存共享、信号量和消息队列等方法。其中最唯一要求是唯一的表示对方进程，在本地进程中可以使用PID，但是在网络中的不同主机中使用便失效了，解决方式就是在传输层中使用协议端口号，已知在网络层中IP可以唯一标识一个主机，而TCP协议和端口号可以唯一标识主机中的一个进程，这样可以利用IP地址+协议+端口号这样的唯一标识去表示网络中的一个进程，这种方式也成为套接字。这样，虽然通信的重点是应用进程，但是我们只要把要传送的报文交到目的主机的某一个合适端口中，剩下的工作就由TCP来完成了。</li>
+<li><strong>seq序号</strong> ：用于对字节流进行编号，例如序号为 301，表示第一个字节的编号为 301，如果携带的数据长度为 100 字节，那么下一个报文段的序号应为 401。</li>
+<li><strong>ack确认号</strong> ：表示期望收到对方下一个报文的第一个字节的序号。例如B收到A发送的报文seq序号是301，全部数据是200字节，B正确收到从A发送的序号到500（301+200-1）的数据，所以B期望收到的A的下一个数据序号是501，于是，B在发送给A的确认报文中，会把ack确认号置为501。</li>
+<li><strong>数据偏移</strong> ：指的是数据部分距离报文段起始处的偏移量，实际上指的是首部的长度。</li>
+<li>连接标志（TCP Flags）：表示控制功能，下面是常见的连接标志。<ul>
+<li><strong>确认 ACK</strong> ：当 ACK=1 时确认号字段有效，否则无效。TCP 规定，在连接建立后所有传送的报文段都必须把 ACK 置 1。</li>
+<li><strong>同步 SYN</strong> ：在连接建立时用来同步序号。当 SYN=a1，ACK=0 时表示这是一个连接请求报文段。若对方同意建立连接，则响应报文中 SYN=1，ACK=1。</li>
+<li><strong>终止 FIN</strong> ：用来释放一个连接，当 FIN=1 时，表示此报文段的发送方的数据已发送完毕，并要求释放连接。</li>
+</ul>
+</li>
+<li><strong>窗口</strong> ：滑动窗口大小，告知发送端接收端的缓存大小（还有多少空间可以接收数据，因为接收方的数据缓存空间是有限的），以此控制发送端发送数据速率，从而达到流量控制。</li>
+</ul>
+<h3 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h3><p>当应用程序希望通过TCP和另一个应用程序通信时，会发送一个通信请求，必须有一个确切地址，在双方握手后TCP将在两个程序间建立一个全双工的通信，将占据两个计算机的通信线路，直到双方关闭为止。（三次握手）</p>
+<p><img src="/2019/11/22/ComputerNetworks/1566261217747.png" alt="1566261217747"></p>
+<p>假设 A 为客户端，B 为服务器端。</p>
+<ul>
+<li>首先 B 处于 LISTEN（监听）状态，等待客户的连接请求。</li>
+<li>A 向 B 发送连接请求报文，SYN=1，ACK=0，选择一个初始的序号 x。</li>
+<li>B 收到连接请求报文，如果同意建立连接，则向 A 发送连接确认报文，SYN=1，ACK=1，确认号为 x+1，同时也选择一个初始的序号 y。</li>
+<li>A 收到 B 的连接确认报文后，还要向 B 发出确认，确认号为 y+1，序号为 x+1。</li>
+<li>B 收到 A 的确认后，连接建立。</li>
+</ul>
+<p><img src="/2019/11/22/ComputerNetworks/1566261228418-1574427053238.png" alt="1566261228418"></p>
+<h3 id="为什么要三次连接"><a href="#为什么要三次连接" class="headerlink" title="为什么要三次连接"></a>为什么要三次连接</h3><p>主要是要初始化Sequence Number 的初始值。通信的双方要互相通知对方自己的初始化的 Sequence Number（缩写为ISN：Inital Sequence Number）——所以叫SYN，全称Synchronize Sequence Numbers。也就上图中的 x 和 y。这个号要作为以后的数据通信的序号，以保证应用层接收到的数据不会因为网络上的传输的问题而乱序（TCP会用这个序号来拼接数据）。</p>
+<h3 id="关于建连接时SYN超时"><a href="#关于建连接时SYN超时" class="headerlink" title="关于建连接时SYN超时"></a>关于建连接时SYN超时</h3><p>试想一下，如果server端接到了 client 发的 SYN 后回了 SYN-ACK 后 client 掉线了，server 端没有收到 client 回来的ACK，那么，这个连接处于一个中间状态，即没成功，也没失败。于是，server 端如果在一定时间内没有收到的TCP会重发 SYN-ACK。在Linux下，默认重试次数为5次，重试的间隔时间从 1s 开始每次都翻售，5 次的重试时间间隔为1s, 2s, 4s, 8s, 16s，总共31s，第5次发出后还要等32s都知道第5次也超时了，所以，总共需要 1s + 2s + 4s+ 8s+ 16s + 32s = 2^6 -1 = 63s，TCP才会把断开这个连接。</p>
+<h3 id="关于SYN-Flood攻击"><a href="#关于SYN-Flood攻击" class="headerlink" title="关于SYN Flood攻击"></a>关于SYN Flood攻击</h3><p>一些恶意的人就为此制造了SYN Flood攻击，给服务器发了一个SYN后，就下线了，于是服务器需要默认等 63s 才会断开连接，这样，攻击者就可以把服务器的 syn 连接的队列耗尽，让正常的连接请求不能处理。于是，Linux下给了一个叫 <strong>tcp_syncookies</strong> 的参数来应对这个事——当SYN队列满了后，TCP会通过源地址端口、目标地址端口和时间戳打造出一个特别的Sequence Number发回去（又叫cookie），如果是攻击者则不会有响应，如果是正常连接，则会把这个 SYN Cookie发回来，然后服务端可以通过cookie建连接（即使你不在SYN队列中）。</p>
+<p>请注意，<strong>请先千万别用 tcp_syncookies 来处理正常的大负载的连接的情况</strong>。因为，synccookies 是妥协版的TCP协议，并不严谨。对于正常的请求，你应该调整三个TCP参数可供你选择。</p>
+<ul>
+<li>第一个是：tcp_synack_retries 可以用他来减少重试次数；</li>
+<li>第二个是：tcp_max_syn_backlog，可以增大SYN连接数；</li>
+<li>第三个是：tcp_abort_on_overflow 处理不过来干脆就直接拒绝连接了 ；</li>
+</ul>
+<h3 id="保活机制"><a href="#保活机制" class="headerlink" title="保活机制"></a>保活机制</h3><ul>
+<li>向对方发送保活探测报文，如果未收到响应则继续发送</li>
+<li>尝试次数达到保活探测数仍然未收到响应则中断连接</li>
+</ul>
+<h2 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h2><p>即断开连接时需要客户端和服务端总共发送4各数据包来确认断开连接。</p>
+<p><img src="/2019/11/22/ComputerNetworks/1566261278901.png" alt="1566261278901"></p>
+<p>以下描述不讨论序号和确认号，因为序号和确认号的规则比较简单。并且不讨论 ACK，因为 ACK 在连接建立之后都为 1。</p>
+<ul>
+<li>A 发送连接释放报文，FIN=1。</li>
+<li>B 收到之后发出确认，此时 TCP 属于半关闭状态，B 能向 A 发送数据但是 A 不能向 B 发送数据。</li>
+<li>当 B 不再需要连接时，发送连接释放报文，FIN=1。</li>
+<li>A 收到后发出确认，进入 TIME-WAIT 状态，等待 2 MSL（最大报文存活时间）后释放连接。</li>
+<li>B 收到 A 的确认后释放连接。</li>
+</ul>
+<h3 id="四次挥手的原因"><a href="#四次挥手的原因" class="headerlink" title="四次挥手的原因"></a>四次挥手的原因</h3><p>客户端发送了 FIN 连接释放报文之后，服务器收到了这个报文，就进入了 CLOSE-WAIT 状态。这个状态是为了让服务器端发送还未传送完毕的数据，传送完毕之后，服务器会发送 FIN 连接释放报文。</p>
+<p>TCP连接是全双工的，服务端可以发送数据到客户端，客户端也可以发送数据到服务端，发送方和接收方都需要两次挥手才能关闭 。</p>
+<h3 id="TIME-WAIT"><a href="#TIME-WAIT" class="headerlink" title="TIME_WAIT"></a>TIME_WAIT</h3><p>客户端接收到服务器端的 FIN 报文后进入此状态，此时并不是直接进入 CLOSED 状态，还需要等待一个时间计时器设置的时间 2MSL。这么做有两个理由：</p>
+<ul>
+<li>确保最后一个确认报文能够到达。如果 B 没收到 A 发送来的确认报文，那么就会重新发送连接释放请求报文，A 等待一段时间就是为了处理这种情况的发生。</li>
+<li>等待一段时间是为了让本连接持续时间内所产生的所有报文都从网络中消失，使得下一个新的连接不会出现旧的连接请求报文。</li>
+</ul>
+<p><img src="/2019/11/22/ComputerNetworks/1566261373431.png" alt="1566261373431"></p>
+<h2 id="TCP-和-UDP-的区别"><a href="#TCP-和-UDP-的区别" class="headerlink" title="TCP 和 UDP 的区别"></a>TCP 和 UDP 的区别</h2><p>前面我们说了 TCP 现在我们来认识一下 UDP。</p>
+<h3 id="UPD-的特点"><a href="#UPD-的特点" class="headerlink" title="UPD 的特点"></a>UPD 的特点</h3><ul>
+<li>面向非连接的</li>
+<li>不维护连接状态，支持同时向多个客户端传输相同的消息</li>
+<li>数据包报头只有 8 个字节，额外开销较小</li>
+<li>吞吐量只受限于数据生成率、传输速率以及机器性能</li>
+<li>尽最大努力交付，不保证可靠交付，不需要维持复杂的链接状态表</li>
+<li>面向报文，不对应用程序提交的报文信息进行拆分或则合并</li>
+</ul>
+<h3 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h3><ul>
+<li>TCP 是面向连接的；UDP 是无连接的。</li>
+<li>TCP 是可靠的；UDP 是不可靠的。</li>
+<li>TCP 只支持点对点通信；UDP 支持一对一、一对多、多对一、多对多的通信模式。</li>
+<li>TCP 是面向字节流的；UDP 是面向报文的。</li>
+<li>TCP 有拥塞控制机制；UDP 没有拥塞控制，适合媒体通信。</li>
+<li>TCP 首部开销(20 个字节)，比 UDP 的首部开销(8 个字节)要大。</li>
+</ul>
+<h2 id="TCP-的滑动窗口"><a href="#TCP-的滑动窗口" class="headerlink" title="TCP 的滑动窗口"></a>TCP 的滑动窗口</h2><p>首先明确：</p>
+<p>TCP滑动窗口分为接受窗口，发送窗口。</p>
+<p>滑动窗口协议是<strong>传输层进行流控</strong>的一种措施，<strong>接收方通过通告发送方自己的窗口大小</strong>，从而控制发送方的发送速度，从而达到防止发送方发送速度过快而导致自己被淹没的目的。</p>
+<h3 id="重要概念"><a href="#重要概念" class="headerlink" title="重要概念"></a>重要概念</h3><p>对ACK的再认识，ack通常被理解为收到数据后给出的一个确认ACK，ACK包含两个非常重要的信息：</p>
+<ul>
+<li>一是期望接收到的下一字节的序号n，该n代表接收方已经接收到了前n-1字节数据，此时如果接收方收到第n+1字节数据而不是第n字节数据，接收方是不会发送序号为n+2的ACK的。举个例子，假如接收端收到1-1024字节，它会发送一个确认号为1025的ACK,但是接下来收到的是2049-3072，它是不会发送确认号为3072的ACK,而依旧发送1025的ACK。</li>
+<li>二是当前的窗口大小m，如此发送方在接收到ACK包含的这两个数据后就可以计算出还可以发送多少字节的数据给对方，假定当前发送方已发送到第x字节，则可以发送的字节数就是y=m-(x-n).这就是滑动窗口控制流量的基本原理</li>
+</ul>
+<p><strong>重点：发送方根据收到ACK当中的期望收到的下一个字节的序号n以及窗口m，还有当前已经发送的字节序号x，算出还可以发送的字节数。</strong></p>
+<p>发送端窗口的第一个字节序号一定是ACK中期望收到的下一个字节序号，比如下图：</p>
+<p><img src="/2019/11/22/ComputerNetworks/image-20191122205849513.png" alt="image-20191122205849513"></p>
+<p>上图52 53 54 55 字节都是可以新发送的字节序。</p>
+<p>接受端窗口的第一个字节序之前一定是已经完全接收的，后面窗口里面的数据都是希望接受的，窗口后面的数据都是不希望接受的。</p>
+<p>TCP的滑动窗口分为接收窗口和发送窗口 不分析这两种窗口就讨论是不妥当的。 TCP的滑动窗口主要有两个作用，一是提供TCP的可靠性，二是提供TCP的流控特性。同时滑动窗口机制还体现了TCP面向字节流的设计思路。</p>
+<h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><p>HTTP 协议，是 Hyper Text Transfer Protocol（超文本传输协议）的缩写，是用于从万维网（WWW:World Wide Web ）服务器传输超文本到本地浏览器的传送协议。</p>
+<p>主要特点如下：</p>
+<ul>
+<li>简单快速：客户向服务器请求服务时，只需传送请求方法和路径。请求方法常用的有 GET、HEAD、POST 等等。每种方法规定了客户与服务器联系的类型不同。由于 HTTP 协议简单，使得 HTTP 服务器的程序规模小，因而通信速度很快。</li>
+<li>数据格式灵活：HTTP 允许传输任意类型的数据对象。正在传输的类型由Content-Type 加以标记。</li>
+<li>无连接：无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。</li>
+<li>无状态：HTTP 协议是无状态协议。无状态，是指协议对于事务处理没有记忆能力。无状态意味着如果后续处理需要前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。另一方面，在服务器不需要先前信息时它的应答就较快。</li>
+<li>支持 B/S 及 C/S 模式。</li>
+</ul>
+<p>请求结构：</p>
+<p><img src="/2019/11/22/ComputerNetworks/1566261538473.png" alt="1566261538473"></p>
+<p>响应结构：</p>
+<p><img src="/2019/11/22/ComputerNetworks/1566261644094.png" alt="1566261644094"></p>
+<p>总结：http协议定义了web客户端如何从web服务器请求web页面，以及服务器如何把web页面传送给客户端，http协议采用了请求响应模型，客户端向服务器发送一个请求报文，包含请求方法，url，协议版本，请求头部，请求数据；服务器以一个状态行作为响应，响应内容包括，协议版本，错误或成功信息，服务器信息，响应头部和响应数据。</p>
+<ul>
+<li>连接：客户端与web服务器的http端口建立一个TCP套接字连接</li>
+<li>发送请求：即通过套接字客户端向web服务端发送一个文本的请求报文</li>
+<li>响应：服务器解析请求，定位请求资源，将资源副本写到TCP套接字，由客户端读取</li>
+<li>释放连接：keep-live长连接会保存一段时间，该时间内请求还会响应</li>
+<li>客户端解析：首先解析状态行，查看表明请求是否成功的状态代码，解析响应头，响应头告知以下若干数据为数据信息，客户端按照格式解析数据，在浏览器窗口显示。</li>
+</ul>
+<p>URL输入后的流程？？？</p>
+<ol>
+<li>DNS解析：浏览器会根据url逐层查询DNS服务器缓存，解析url中的域名所对应的IP地址（DNS缓存从近到远为浏览器缓存，系统缓存，路由器缓存，IPS服务器缓存，根域名服务器缓存，顶级域名服务器缓存），此时找到IP地址</li>
+<li>TCP连接：找到IP地址后会根据IP地址和对应端口与服务器建立TCP连接（三次握手）</li>
+<li>发送HTTP请求：浏览器会发起读取文件的http请求，</li>
+<li>服务器处理请求并返回HTTP报文：服务器对浏览器请求响应，并把对应的带有http文本的http响应报文发送给浏览器</li>
+<li>浏览器解析渲染页面：浏览器收到报文，解析渲染到浏览器</li>
+<li>释放连接</li>
+</ol>
+<p>状态码</p>
+<p><img src="/2019/11/22/ComputerNetworks/1566261699701.png" alt="1566261699701"></p>
+<h3 id="GET-和-POST-区别"><a href="#GET-和-POST-区别" class="headerlink" title="GET 和 POST 区别"></a>GET 和 POST 区别</h3><p>从三个层面来解答：</p>
+<ul>
+<li>Http 报文层面：GET 将请求信息放在 URL中，POST 方法报文中</li>
+<li>数据库层面：GET 符合幂等性和安全性，POST 不符合</li>
+<li>其他层面：GET 可以被缓存、被存储（书签），而 POST 不行</li>
+</ul>
+<h3 id="Cookie-和-Session-的区别"><a href="#Cookie-和-Session-的区别" class="headerlink" title="Cookie 和 Session 的区别"></a>Cookie 和 Session 的区别</h3><p><strong>Cookie 简介：</strong></p>
+<ul>
+<li>是由服务器发给客户端的特殊信息，以文本的形式存放在客户端</li>
+<li>客户端再次请求的时候，会把 Cookie 回发给服务端</li>
+<li>服务器接收到后，会解析 Cookie 生成与客户端相对的内容</li>
+</ul>
+<p><strong>Cookiet 的设置以及发送过程：</strong></p>
+<p><img src="/2019/11/22/ComputerNetworks/image-20191122210015905.png" alt="image-20191122210015905"></p>
+<p><strong>Session 简介：</strong></p>
+<ul>
+<li>服务端的机制，在服务端保存的信息</li>
+<li>解析客户端请求并操作 Session id ，按需保存状态信息</li>
+</ul>
+<p><strong>Session 的实现方式：</strong></p>
+<ul>
+<li>使用 Cookie 来实现</li>
+<li>使用 URL 回写来实现，每次在 URL 添加 Session id 信息</li>
+</ul>
+<p><strong>区别</strong>：</p>
+<ul>
+<li>Cookie 数据存放在客户端的浏览器上，Session 数据存放在服务器上</li>
+<li>Session 相对于 Cookie 更安全</li>
+<li>若考虑减轻服务器负担，应当使用 Cookie</li>
+</ul>
+<h3 id="HTTP-和-HTTPs-的区别"><a href="#HTTP-和-HTTPs-的区别" class="headerlink" title="HTTP 和 HTTPs 的区别"></a>HTTP 和 HTTPs 的区别</h3><p><img src="/2019/11/22/ComputerNetworks/image-20191122210051958.png" alt="image-20191122210051958"></p>
+<h4 id="SSL-Security-Sockets-Layer-安全套接层"><a href="#SSL-Security-Sockets-Layer-安全套接层" class="headerlink" title="SSL (Security Sockets Layer) 安全套接层"></a>SSL (Security Sockets Layer) 安全套接层</h4><ul>
+<li>为网络通信提供安全及数据完整性的一种安全协议</li>
+<li>是操作系统对外的 API，SSL 3.0 更名为 TLS</li>
+<li>采用身份验证和数据加密来保证网络的通信的安全和数据的完整性</li>
+</ul>
+<h4 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h4><ul>
+<li>HTTPS 需要到 CA 申请证书，HTTP 不需要</li>
+<li>HTTPS 密文传输，HTTP 明文传输</li>
+<li>连接方式不同，HTTPS 默认使用 443 端口，HTTP 使用 80 端口</li>
+<li>HTTPS = HTTP + 加密 + 认证 + 完整性保护，较 HTTP 安全</li>
+</ul>
+<h2 id="Socket"><a href="#Socket" class="headerlink" title="Socket"></a>Socket</h2><p>唯一标识一个进程：本地中使用PID；</p>
+<p>网络中进程：IP地址+协议+端口号来唯一标识一个网络中的一个进程；</p>
+<p><img src="/2019/11/22/ComputerNetworks/1566261798658.png" alt="1566261798658"></p>
+<p>socket通信流程</p>
+<p><img src="/2019/11/22/ComputerNetworks/1566261805698.png" alt="1566261805698"></p>
+<ul>
+<li><input disabled type="checkbox"> Socket通信编程</li>
+</ul>
+<h2 id="QA"><a href="#QA" class="headerlink" title="QA"></a>QA</h2><h3 id="OSI与TCP-IP的协议"><a href="#OSI与TCP-IP的协议" class="headerlink" title="OSI与TCP/IP的协议"></a>OSI与TCP/IP的协议</h3><p>学习计算机网络时我们一般采用折中的办法，也就是中和 OSI 和 TCP/IP 的优点，采用一种只有五层协议的体系结构，这样既简洁又能将概念阐述清楚。</p>
+<p><img src="http://m.qpic.cn/psb?/V11tv2Vw2h2WsJ/NwMQ9mez*i97f2u6JhqrOh14XAag318f8TuAngEDQ8w!/b/dL8AAAAAAAAA&bo=eQJYAXkCWAEDKQw!&rf=viewer_4" alt="五层体系结构"></p>
+<p>结合互联网的情况，自上而下地，非常简要的介绍一下各层的作用。</p>
+<h4 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h4><p><strong>应用层(application-layer）的任务是通过应用进程间的交互来完成特定网络应用。</strong>应用层协议定义的是应用进程（进程：主机中正在运行的程序）间的通信和交互的规则。对于不同的网络应用需要不同的应用层协议。在互联网中应用层协议很多，如<strong>域名系统DNS</strong>，支持万维网应用的 <strong>HTTP协议</strong>，支持电子邮件的 <strong>SMTP协议</strong>等等。我们把应用层交互的数据单元称为报文。</p>
+<p><strong>域名系统</strong></p>
+<blockquote>
+<p>域名系统(Domain Name System缩写 DNS，Domain Name被译为域名)是因特网的一项核心服务，它作为可以将域名和IP地址相互映射的一个分布式数据库，能够使人更方便的访问互联网，而不用去记住能够被机器直接读取的IP数串。（百度百科）例如：一个公司的 Web 网站可看作是它在网上的门户，而域名就相当于其门牌地址，通常域名都使用该公司的名称或简称。例如上面提到的微软公司的域名，类似的还有：IBM 公司的域名是 <a href="http://www.ibm.xn--comoracle-xj3h/" target="_blank" rel="noopener">www.ibm.com、Oracle</a> 公司的域名是 <a href="http://www.oracle.xn--comcisco-hm3g8360a63fhh376bwz2c1gzc/" target="_blank" rel="noopener">www.oracle.com、Cisco公司的域名是</a> <a href="http://www.cisco.com/" target="_blank" rel="noopener">www.cisco.com</a> 等。</p>
+</blockquote>
+<p><strong>HTTP协议</strong></p>
+<blockquote>
+<p>超文本传输协议（HTTP，HyperText Transfer Protocol)是互联网上应用最为广泛的一种网络协议。所有的 WWW（万维网） 文件都必须遵守这个标准。设计 HTTP 最初的目的是为了提供一种发布和接收 HTML 页面的方法。（百度百科）</p>
+</blockquote>
+<h4 id="运输层"><a href="#运输层" class="headerlink" title="运输层"></a>运输层</h4><p><strong>运输层(transport layer)的主要任务就是负责向两台主机进程之间的通信提供通用的数据传输服务</strong>。应用进程利用该服务传送应用层报文。“通用的”是指并不针对某一个特定的网络应用，而是多种应用可以使用同一个运输层服务。由于一台主机可同时运行多个线程，因此运输层有复用和分用的功能。所谓复用就是指多个应用层进程可同时使用下面运输层的服务，分用和复用相反，是运输层把收到的信息分别交付上面应用层中的相应进程。</p>
+<p><strong>运输层主要使用以下两种协议:</strong></p>
+<ol>
+<li><strong>传输控制协议 TCP</strong>（Transmission Control Protocol）–提供<strong>面向连接</strong>的，<strong>可靠的</strong>数据传输服务。</li>
+<li><strong>用户数据协议 UDP</strong>（User Datagram Protocol）–提供<strong>无连接</strong>的，尽最大努力的数据传输服务（<strong>不保证数据传输的可靠性</strong>）。</li>
+</ol>
+<h4 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h4><p><strong>在 计算机网络中进行通信的两个计算机之间可能会经过很多个数据链路，也可能还要经过很多通信子网。网络层的任务就是选择合适的网间路由和交换结点， 确保数据及时传送。</strong> 在发送数据时，网络层把运输层产生的报文段或用户数据报封装成分组和包进行传送。在 TCP/IP 体系结构中，由于网络层使用 <strong>IP 协议</strong>，因此分组也叫 <strong>IP 数据报</strong> ，简称 <strong>数据报</strong>。</p>
+<p>这里要注意：<strong>不要把运输层的“用户数据报 UDP ”和网络层的“ IP 数据报”弄混</strong>。另外，无论是哪一层的数据单元，都可笼统地用“分组”来表示。</p>
+<p>这里强调指出，网络层中的“网络”二字已经不是我们通常谈到的具体网络，而是指计算机网络体系结构模型中第三层的名称.</p>
+<p>互联网是由大量的异构（heterogeneous）网络通过路由器（router）相互连接起来的。互联网使用的网络层协议是无连接的网际协议（Intert Protocol）和许多路由选择协议，因此互联网的网络层也叫做<strong>网际层</strong>或<strong>IP层</strong>。</p>
+<h4 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h4><p><strong>数据链路层(data link layer)通常简称为链路层。两台主机之间的数据传输，总是在一段一段的链路上传送的，这就需要使用专门的链路层的协议。</strong> 在两个相邻节点之间传送数据时，<strong>数据链路层将网络层交下来的 IP 数据报组装程帧</strong>，在两个相邻节点间的链路上传送帧。每一帧包括数据和必要的控制信息（如同步信息，地址信息，差错控制等）。</p>
+<p>在接收数据时，控制信息使接收端能够知道一个帧从哪个比特开始和到哪个比特结束。这样，数据链路层在收到一个帧后，就可从中提出数据部分，上交给网络层。 控制信息还使接收端能够检测到所收到的帧中有误差错。如果发现差错，数据链路层就简单地丢弃这个出了差错的帧，以避免继续在网络中传送下去白白浪费网络资源。如果需要改正数据在链路层传输时出现差错（这就是说，数据链路层不仅要检错，而且还要纠错），那么就要采用可靠性传输协议来纠正出现的差错。这种方法会使链路层的协议复杂些。</p>
+<h4 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h4><p>在物理层上所传送的数据单位是比特。 <strong>物理层(physical layer)的作用是实现相邻计算机节点之间比特流的透明传送，尽可能屏蔽掉具体传输介质和物理设备的差异。</strong> 使其上面的数据链路层不必考虑网络的具体传输介质是什么。“透明传送比特流”表示经实际电路传送后的比特流没有发生变化，对传送的比特流来说，这个电路好像是看不见的。</p>
+<p>在互联网使用的各种协中最重要和最著名的就是 TCP/IP 两个协议。现在人们经常提到的TCP/IP并不一定单指TCP和IP这两个具体的协议，而往往表示互联网所使用的整个TCP/IP协议族。</p>
+<h4 id="总结一下"><a href="#总结一下" class="headerlink" title="总结一下"></a>总结一下</h4><p>上面我们对计算机网络的五层体系结构有了初步的了解，下面附送一张七层体系结构图总结一下。图片来源：<a href="https://blog.csdn.net/yaopeng_2005/article/details/7064869" target="_blank" rel="noopener">https://blog.csdn.net/yaopeng_2005/article/details/7064869</a></p>
+<h3 id="TCP-三次握手和四次挥手"><a href="#TCP-三次握手和四次挥手" class="headerlink" title="TCP 三次握手和四次挥手"></a>TCP 三次握手和四次挥手</h3><p>为了准确无误地把数据送达目标处，TCP协议采用了三次握手策略。</p>
+<ul>
+<li>客户端–发送带有 SYN 标志的数据包–一次握手–服务端</li>
+<li>服务端–发送带有 SYN/ACK 标志的数据包–二次握手–客户端</li>
+<li>客户端–发送带有带有 ACK 标志的数据包–三次握手–服务端</li>
+</ul>
+<h4 id="为什么要三次握手"><a href="#为什么要三次握手" class="headerlink" title="为什么要三次握手"></a>为什么要三次握手</h4><p><strong>三次握手的目的是建立可靠的通信信道，说到通讯，简单来说就是数据的发送与接收，而三次握手最主要的目的就是双方确认自己与对方的发送与接收是正常的。</strong></p>
+<p>第一次握手：Client 什么都不能确认；Server 确认了对方发送正常，自己接收正常</p>
+<p>第二次握手：Client 确认了：自己发送、接收正常，对方发送、接收正常；Server 确认了：对方发送正常，自己接收正常</p>
+<p>第三次握手：Client 确认了：自己发送、接收正常，对方发送、接收正常；Server 确认了：自己发送、接收正常，对方发送、接收正常</p>
+<p>所以三次握手就能确认双发收发功能都正常，缺一不可。</p>
+<h4 id="为什么要传回-SYN"><a href="#为什么要传回-SYN" class="headerlink" title="为什么要传回 SYN"></a>为什么要传回 SYN</h4><p>接收端传回发送端所发送的 SYN 是为了告诉发送端，我接收到的信息确实就是你所发送的信号了。</p>
+<blockquote>
+<p>SYN 是 TCP/IP 建立连接时使用的握手信号。在客户机和服务器之间建立正常的 TCP 网络连接时，客户机首先发出一个 SYN 消息，服务器使用 SYN-ACK 应答表示接收到了这个消息，最后客户机再以 ACK(Acknowledgement[汉译：确认字符 ,在数据通信传输中，接收站发给发送站的一种传输控制字符。它表示确认发来的数据已经接受无误。 ]）消息响应。这样在客户机和服务器之间才能建立起可靠的TCP连接，数据才可以在客户机和服务器之间传递。</p>
+</blockquote>
+<h4 id="传了-SYN-为啥还要传-ACK"><a href="#传了-SYN-为啥还要传-ACK" class="headerlink" title="传了 SYN,为啥还要传 ACK"></a>传了 SYN,为啥还要传 ACK</h4><p>双方通信无误必须是两者互相发送信息都无误。传了 SYN，证明发送方到接收方的通道没有问题，但是接收方到发送方的通道还需要 ACK 信号来进行验证。</p>
+<p>断开一个 TCP 连接则需要“四次挥手”：</p>
+<ul>
+<li>客户端-发送一个 FIN，用来关闭客户端到服务器的数据传送</li>
+<li>服务器-收到这个 FIN，它发回一 个 ACK，确认序号为收到的序号加1 。和 SYN 一样，一个 FIN 将占用一个序号</li>
+<li>服务器-关闭与客户端的连接，发送一个FIN给客户端</li>
+<li>客户端-发回 ACK 报文确认，并将确认序号设置为收到序号加1</li>
+</ul>
+<h4 id="为什么要四次挥手"><a href="#为什么要四次挥手" class="headerlink" title="为什么要四次挥手"></a>为什么要四次挥手</h4><p>任何一方都可以在数据传送结束后发出连接释放的通知，待对方确认后进入半关闭状态。当另一方也没有数据再发送的时候，则发出连接释放通知，对方确认后就完全关闭了TCP连接。</p>
+<p>举个例子：A 和 B 打电话，通话即将结束后，A 说“我没啥要说的了”，B回答“我知道了”，但是 B 可能还会有要说的话，A 不能要求 B 跟着自己的节奏结束通话，于是 B 可能又巴拉巴拉说了一通，最后 B 说“我说完了”，A 回答“知道了”，这样通话才算结束。</p>
+<p>上面讲的比较概括，推荐一篇讲的比较细致的文章：<a href="https://blog.csdn.net/qzcsu/article/details/72861891" target="_blank" rel="noopener">https://blog.csdn.net/qzcsu/article/details/72861891</a></p>
+<h3 id="TCP、UDP-协议的区别"><a href="#TCP、UDP-协议的区别" class="headerlink" title="TCP、UDP 协议的区别"></a>TCP、UDP 协议的区别</h3><p><img src="http://m.qpic.cn/psb?/V11tv2Vw2h2WsJ/8Mtws13i04*MNhxm7c6NUQukdKULAlH2ajFaBni3uZc!/b/dDQBAAAAAAAA&bo=YQPbAGED2wADGTw!&rf=viewer_4" alt="TCP、UDP协议的区别"></p>
+<p>UDP 在传送数据之前不需要先建立连接，远地主机在收到 UDP 报文后，不需要给出任何确认。虽然 UDP 不提供可靠交付，但在某些情况下 UDP 确是一种最有效的工作方式（一般用于即时通信），比如： QQ 语音、 QQ 视频 、直播等等</p>
+<p>TCP 提供面向连接的服务。在传送数据之前必须先建立连接，数据传送结束后要释放连接。 TCP 不提供广播或多播服务。由于 TCP 要提供可靠的，面向连接的传输服务（TCP的可靠体现在TCP在传递数据之前，会有三次握手来建立连接，而且在数据传递时，有确认、窗口、重传、拥塞控制机制，在数据传完后，还会断开连接用来节约系统资源），这一难以避免增加了许多开销，如确认，流量控制，计时器以及连接管理等。这不仅使协议数据单元的首部增大很多，还要占用许多处理机资源。TCP 一般用于文件传输、发送和接收邮件、远程登录等场景。</p>
+<h3 id="TCP-协议如何保证可靠传输"><a href="#TCP-协议如何保证可靠传输" class="headerlink" title="TCP 协议如何保证可靠传输"></a>TCP 协议如何保证可靠传输</h3><ol>
+<li>应用数据被分割成 TCP 认为最适合发送的数据块。</li>
+<li>TCP 给发送的每一个包进行编号，接收方对数据包进行排序，把有序数据传送给应用层。</li>
+<li><strong>校验和：</strong> TCP 将保持它首部和数据的检验和。这是一个端到端的检验和，目的是检测数据在传输过程中的任何变化。如果收到段的检验和有差错，TCP 将丢弃这个报文段和不确认收到此报文段。</li>
+<li>TCP 的接收端会丢弃重复的数据。</li>
+<li><strong>流量控制：</strong> TCP 连接的每一方都有固定大小的缓冲空间，TCP的接收端只允许发送端发送接收端缓冲区能接纳的数据。当接收方来不及处理发送方的数据，能提示发送方降低发送的速率，防止包丢失。TCP 使用的流量控制协议是可变大小的滑动窗口协议。 （TCP 利用滑动窗口实现流量控制）</li>
+<li><strong>拥塞控制：</strong> 当网络拥塞时，减少数据的发送。</li>
+<li><strong>ARQ协议：</strong> 也是为了实现可靠传输的，它的基本原理就是每发完一个分组就停止发送，等待对方确认。在收到确认后再发下一个分组。</li>
+<li><strong>超时重传：</strong> 当 TCP 发出一个段后，它启动一个定时器，等待目的端确认收到这个报文段。如果不能及时收到一个确认，将重发这个报文段。</li>
+</ol>
+<h4 id="ARQ协议"><a href="#ARQ协议" class="headerlink" title="ARQ协议"></a>ARQ协议</h4><p><strong>自动重传请求</strong>（Automatic Repeat-reQuest，ARQ）是OSI模型中数据链路层和传输层的错误纠正协议之一。它通过使用确认和超时这两个机制，在不可靠服务的基础上实现可靠的信息传输。如果发送方在发送后一段时间之内没有收到确认帧，它通常会重新发送。ARQ包括停止等待ARQ协议和连续ARQ协议。</p>
+<h4 id="停止等待ARQ协议"><a href="#停止等待ARQ协议" class="headerlink" title="停止等待ARQ协议"></a>停止等待ARQ协议</h4><ul>
+<li>停止等待协议是为了实现可靠传输的，它的基本原理就是每发完一个分组就停止发送，等待对方确认（回复ACK）。如果过了一段时间（超时时间后），还是没有收到 ACK 确认，说明没有发送成功，需要重新发送，直到收到确认后再发下一个分组；</li>
+<li>在停止等待协议中，若接收方收到重复分组，就丢弃该分组，但同时还要发送确认；</li>
+</ul>
+<h4 id="滑动窗口和流量控制"><a href="#滑动窗口和流量控制" class="headerlink" title="滑动窗口和流量控制"></a>滑动窗口和流量控制</h4><p><strong>TCP 利用滑动窗口实现流量控制。流量控制是为了控制发送方发送速率，保证接收方来得及接收。</strong> 接收方发送的确认报文中的窗口字段可以用来控制发送方窗口大小，从而影响发送方的发送速率。将窗口字段设置为 0，则发送方不能发送数据。</p>
+<h4 id="拥塞控制"><a href="#拥塞控制" class="headerlink" title="拥塞控制"></a>拥塞控制</h4><p>在某段时间，若对网络中某一资源的需求超过了该资源所能提供的可用部分，网络的性能就要变坏。这种情况就叫拥塞。拥塞控制就是为了防止过多的数据注入到网络中，这样就可以使网络中的路由器或链路不致过载。拥塞控制所要做的都有一个前提，就是网络能够承受现有的网络负荷。拥塞控制是一个全局性的过程，涉及到所有的主机，所有的路由器，以及与降低网络传输性能有关的所有因素。相反，流量控制往往是点对点通信量的控制，是个端到端的问题。流量控制所要做到的就是抑制发送端发送数据的速率，以便使接收端来得及接收。</p>
+<p>为了进行拥塞控制，TCP 发送方要维持一个 <strong>拥塞窗口(cwnd)</strong> 的状态变量。拥塞控制窗口的大小取决于网络的拥塞程度，并且动态变化。发送方让自己的发送窗口取为拥塞窗口和接收方的接受窗口中较小的一个。</p>
+<p>TCP的拥塞控制采用了四种算法，即 <strong>慢开始</strong> 、 <strong>拥塞避免</strong> 、<strong>快重传</strong> 和 <strong>快恢复</strong>。在网络层也可以使路由器采用适当的分组丢弃策略（如主动队列管理 AQM），以减少网络拥塞的发生。</p>
+<ul>
+<li><strong>慢开始：</strong> 慢开始算法的思路是当主机开始发送数据时，如果立即把大量数据字节注入到网络，那么可能会引起网络阻塞，因为现在还不知道网络的符合情况。经验表明，较好的方法是先探测一下，即由小到大逐渐增大发送窗口，也就是由小到大逐渐增大拥塞窗口数值。cwnd初始值为1，每经过一个传播轮次，cwnd加倍。</li>
+<li><strong>拥塞避免：</strong> 拥塞避免算法的思路是让拥塞窗口cwnd缓慢增大，即每经过一个往返时间RTT就把发送放的cwnd加1.</li>
+<li><strong>快重传与快恢复：</strong> 在 TCP/IP 中，快速重传和恢复（fast retransmit and recovery，FRR）是一种拥塞控制算法，它能快速恢复丢失的数据包。没有 FRR，如果数据包丢失了，TCP 将会使用定时器来要求传输暂停。在暂停的这段时间内，没有新的或复制的数据包被发送。有了 FRR，如果接收机接收到一个不按顺序的数据段，它会立即给发送机发送一个重复确认。如果发送机接收到三个重复确认，它会假定确认件指出的数据段丢失了，并立即重传这些丢失的数据段。有了 FRR，就不会因为重传时要求的暂停被耽误。 　当有单独的数据包丢失时，快速重传和恢复（FRR）能最有效地工作。当有多个数据信息包在某一段很短的时间内丢失时，它则不能很有效地工作。</li>
+</ul>
+<h3 id="URL-到网页显示"><a href="#URL-到网页显示" class="headerlink" title="URL 到网页显示"></a>URL 到网页显示</h3><p>图解（图片来源：《图解HTTP》）：</p>
+<p><img src="http://m.qpic.cn/psb?/V11tv2Vw2h2WsJ/krh8m5lpufZU6OX9enXcVdQrVltJTku3irYOENXzFxM!/b/dFMBAAAAAAAA&bo=1AI.AtQCPgIDKQw!&rf=viewer_4" alt="状态码"></p>
+<p>总体来说分为以下几个过程:</p>
+<ol>
+<li>DNS解析</li>
+<li>TCP连接</li>
+<li>发送HTTP请求</li>
+<li>服务器处理请求并返回HTTP报文</li>
+<li>浏览器解析渲染页面</li>
+<li>连接结束</li>
+</ol>
+<h3 id="各种协议与HTTP协议"><a href="#各种协议与HTTP协议" class="headerlink" title="各种协议与HTTP协议"></a>各种协议与HTTP协议</h3><p><img src="http://m.qpic.cn/psb?/V11tv2Vw2h2WsJ/08ikSdkksqhIeEzyW6wrL6*jbSfpvdT2Kr.BKbEOhO4!/b/dDMBAAAAAAAA&bo=SQOpBEkDqQQDSWw!&rf=viewer_4" alt="各种协议与HTTP协议之间的关系"></p>
+<h3 id="HTTP长连接、短连接"><a href="#HTTP长连接、短连接" class="headerlink" title="HTTP长连接、短连接"></a>HTTP长连接、短连接</h3><p>在HTTP/1.0中默认使用短连接。也就是说，客户端和服务器每进行一次HTTP操作，就建立一次连接，任务结束就中断连接。当客户端浏览器访问的某个HTML或其他类型的Web页中包含有其他的Web资源（如JavaScript文件、图像文件、CSS文件等），每遇到这样一个Web资源，浏览器就会重新建立一个HTTP会话。</p>
+<p>而从HTTP/1.1起，默认使用长连接，用以保持连接特性。使用长连接的HTTP协议，会在响应头加入这行代码：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Connection:keep-alive</span><br></pre></td></tr></table></figure>
+
+<p>在使用长连接的情况下，当一个网页打开完成后，客户端和服务器之间用于传输HTTP数据的TCP连接不会关闭，客户端再次访问这个服务器时，会继续使用这一条已经建立的连接。Keep-Alive不会永久保持连接，它有一个保持时间，可以在不同的服务器软件（如Apache）中设定这个时间。实现长连接需要客户端和服务端都支持长连接。</p>
+<p><strong>HTTP协议的长连接和短连接，实质上是TCP协议的长连接和短连接。</strong></p>
+<p>—— <a href="https://www.cnblogs.com/gotodsp/p/6366163.html" target="_blank" rel="noopener">《HTTP长连接、短连接究竟是什么？》</a></p>
+<h3 id="HTTP状态保存机制"><a href="#HTTP状态保存机制" class="headerlink" title="HTTP状态保存机制"></a>HTTP状态保存机制</h3><p>HTTP 是一种不保存状态，即无状态（stateless）协议。也就是说 HTTP 协议自身不对请求和响应之间的通信状态进行保存。那么我们保存用户状态呢？Session 机制的存在就是为了解决这个问题，Session 的主要作用就是通过服务端记录用户的状态。典型的场景是购物车，当你要添加商品到购物车的时候，系统不知道是哪个用户操作的，因为 HTTP 协议是无状态的。服务端给特定的用户创建特定的 Session 之后就可以标识这个用户并且跟踪这个用户了（一般情况下，服务器会在一定时间内保存这个 Session，过了时间限制，就会销毁这个Session）。</p>
+<p>在服务端保存 Session 的方法很多，最常用的就是内存和数据库(比如是使用内存数据库redis保存)。既然 Session 存放在服务器端，那么我们如何实现 Session 跟踪呢？大部分情况下，我们都是通过在 Cookie 中附加一个 Session ID 来方式来跟踪。</p>
+<p><strong>Cookie 被禁用怎么办?</strong></p>
+<p>最常用的就是利用 URL 重写把 Session ID 直接附加在URL路径的后面。</p>
+<h3 id="Cookie、Session的解析"><a href="#Cookie、Session的解析" class="headerlink" title="Cookie、Session的解析"></a>Cookie、Session的解析</h3><p>Cookie 和 Session都是用来跟踪浏览器用户身份的会话方式，但是两者的应用场景不太一样。</p>
+<p><strong>Cookie 一般用来保存用户信息</strong> 比如①我们在 Cookie 中保存已经登录过得用户信息，下次访问网站的时候页面可以自动帮你登录的一些基本信息给填了；②一般的网站都会有保持登录也就是说下次你再访问网站的时候就不需要重新登录了，这是因为用户登录的时候我们可以存放了一个 Token 在 Cookie 中，下次登录的时候只需要根据 Token 值来查找用户即可(为了安全考虑，重新登录一般要将 Token 重写)；③登录一次网站后访问网站其他页面不需要重新登录。<strong>Session 的主要作用就是通过服务端记录用户的状态。</strong> 典型的场景是购物车，当你要添加商品到购物车的时候，系统不知道是哪个用户操作的，因为 HTTP 协议是无状态的。服务端给特定的用户创建特定的 Session 之后就可以标识这个用户并且跟踪这个用户了。</p>
+<p>Cookie 数据保存在客户端(浏览器端)，Session 数据保存在服务器端。</p>
+<p>Cookie 存储在客户端中，而Session存储在服务器上，相对来说 Session 安全性更高。如果使用 Cookie 的一些敏感信息不要写入 Cookie 中，最好能将 Cookie 信息加密然后使用到的时候再去服务器端解密。</p>
+<h4 id="浏览器禁用-Cookie"><a href="#浏览器禁用-Cookie" class="headerlink" title="浏览器禁用 Cookie"></a>浏览器禁用 Cookie</h4><p>此时无法使用 Cookie 来保存用户信息，只能使用 Session。除此之外，不能再将 Session ID 存放到 Cookie 中，而是使用 URL 重写技术，将 Session ID 作为 URL 的参数进行传递。</p>
+<h4 id="Cookie-与-Session-选择"><a href="#Cookie-与-Session-选择" class="headerlink" title="Cookie 与 Session 选择"></a>Cookie 与 Session 选择</h4><ul>
+<li>Cookie 只能存储 ASCII 码字符串，而 Session 则可以存储任何类型的数据，因此在考虑数据复杂性时首选 Session；</li>
+<li>Cookie 存储在浏览器中，容易被恶意查看。如果非要将一些隐私数据存在 Cookie 中，可以将 Cookie 值进行加密，然后在服务器进行解密；</li>
+<li>对于大型网站，如果用户所有的信息都存储在 Session 中，那么开销是非常大的，因此不建议将所有的用户信息都存储到 Session 中。</li>
+</ul>
+<h3 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h3><p>HTTP 协议是无状态的，主要是为了让 HTTP 协议尽可能简单，使得它能够处理大量事务。HTTP/1.1 引入 Cookie 来保存状态信息。</p>
+<p>Cookie 是服务器发送到用户浏览器并保存在本地的一小块数据，它会在浏览器之后向同一服务器再次发起请求时被携带上，用于告知服务端两个请求是否来自同一浏览器。由于之后每次请求都会需要携带 Cookie 数据，因此会带来额外的性能开销（尤其是在移动环境下）。</p>
+<p>Cookie 曾一度用于客户端数据的存储，因为当时并没有其它合适的存储办法而作为唯一的存储手段，但现在随着现代浏览器开始支持各种各样的存储方式，Cookie 渐渐被淘汰。新的浏览器 API 已经允许开发者直接将数据存储到本地，如使用 Web storage API（本地存储和会话存储）或 IndexedDB。</p>
+<h4 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h4><ul>
+<li>会话状态管理（如用户登录状态、购物车、游戏分数或其它需要记录的信息）</li>
+<li>个性化设置（如用户自定义设置、主题等）</li>
+<li>浏览器行为跟踪（如跟踪分析用户行为等）</li>
+</ul>
+<h4 id="创建过程"><a href="#创建过程" class="headerlink" title="创建过程"></a>创建过程</h4><p>服务器发送的响应报文包含 Set-Cookie 首部字段，客户端得到响应报文后把 Cookie 内容保存到浏览器中。</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.0 <span class="number">200</span> OK</span><br><span class="line"><span class="attribute">Content-type</span>: text/html</span><br><span class="line"><span class="attribute">Set-Cookie</span>: yummy_cookie=choco</span><br><span class="line"><span class="attribute">Set-Cookie</span>: tasty_cookie=strawberry</span><br></pre></td></tr></table></figure>
+
+<p>客户端之后对同一个服务器发送请求时，会从浏览器中取出 Cookie 信息并通过 Cookie 请求首部字段发送给服务器。</p>
+<p>客户端之后对同一个服务器发送请求时，会从浏览器中取出 Cookie 信息并通过 Cookie 请求首部字段发送给服务器。</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">GET</span> <span class="string">/sample_page.html</span> HTTP/1.1</span><br><span class="line"><span class="attribute">Host</span>: www.example.org</span><br><span class="line"><span class="attribute">Cookie</span>: yummy_cookie=choco; tasty_cookie=strawberry</span><br></pre></td></tr></table></figure>
+
+<h4 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h4><ul>
+<li>会话期 Cookie：浏览器关闭之后它会被自动删除，也就是说它仅在会话期内有效。</li>
+<li>持久性 Cookie：指定过期时间（Expires）或有效期（max-age）之后就成为了持久性的 Cookie。</li>
+</ul>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Set-Cookie</span>: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;</span><br></pre></td></tr></table></figure>
+
+<h4 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h4><p>Domain 标识指定了哪些主机可以接受 Cookie。如果不指定，默认为当前文档的主机（不包含子域名）。如果指定了 Domain，则一般包含子域名。例如，如果设置 Domain=mozilla.org，则 Cookie 也包含在子域名中（如 developer.mozilla.org）。</p>
+<p>Path 标识指定了主机下的哪些路径可以接受 Cookie（该 URL 路径必须存在于请求 URL 中）。以字符 %x2F (“/“) 作为路径分隔符，子路径也会被匹配。例如，设置 Path=/docs，则以下地址都会匹配：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/docs</span><br><span class="line">/docs/Web/</span><br><span class="line">/docs/Web/HTTP</span><br></pre></td></tr></table></figure>
+
+<h3 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h3><p>除了可以将用户信息通过 Cookie 存储在用户浏览器中，也可以利用 Session 存储在服务器端，存储在服务器端的信息更加安全。</p>
+<p>Session 可以存储在服务器上的文件、数据库或者内存中。也可以将 Session 存储在 Redis 这种内存型数据库中，效率会更高。</p>
+<p>使用 Session 维护用户登录状态的过程如下：</p>
+<ul>
+<li>用户进行登录时，用户提交包含用户名和密码的表单，放入 HTTP 请求报文中；</li>
+<li>服务器验证该用户名和密码，如果正确则把用户信息存储到 Redis 中，它在 Redis 中的 Key 称为 Session ID；</li>
+<li>服务器返回的响应报文的 Set-Cookie 首部字段包含了这个 Session ID，客户端收到响应报文之后将该 Cookie 值存入浏览器中；</li>
+<li>客户端之后对同一个服务器进行请求时会包含该 Cookie 值，服务器收到之后提取出 Session ID，从 Redis 中取出用户信息，继续之前的业务操作。</li>
+</ul>
+<p>应该注意 Session ID 的安全性问题，不能让它被恶意攻击者轻易获取，那么就不能产生一个容易被猜到的 Session ID 值。此外，还需要经常重新生成 Session ID。在对安全性要求极高的场景下，例如转账等操作，除了使用 Session 管理用户状态之外，还需要对用户进行重新验证，比如重新输入密码，或者使用短信验证码等方式。</p>
+<h3 id="HTTP-1-0与HTTP-1-1"><a href="#HTTP-1-0与HTTP-1-1" class="headerlink" title="HTTP 1.0与HTTP 1.1"></a>HTTP 1.0与HTTP 1.1</h3><blockquote>
+<p>这部分回答引用这篇文章 <a href="https://mp.weixin.qq.com/s/GICbiyJpINrHZ41u_4zT-A" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/GICbiyJpINrHZ41u_4zT-A</a>? 的一些内容。</p>
+</blockquote>
+<p>HTTP1.0最早在网页中使用是在1996年，那个时候只是使用一些较为简单的网页上和网络请求上，而HTTP1.1则在1999年才开始广泛应用于现在的各大浏览器网络请求中，同时HTTP1.1也是当前使用最为广泛的HTTP协议。 主要区别主要体现在：</p>
+<ol>
+<li><strong>长连接</strong> : <strong>在HTTP/1.0中，默认使用的是短连接</strong>，也就是说每次请求都要重新建立一次连接。HTTP 是基于TCP/IP协议的,每一次建立或者断开连接都需要三次握手四次挥手的开销，如果每次请求都要这样的话，开销会比较大。因此最好能维持一个长连接，可以用个长连接来发多个请求。<strong>HTTP 1.1起，默认使用长连接</strong> ,默认开启Connection： keep-alive。 <strong>HTTP/1.1的持续连接有非流水线方式和流水线方式</strong> 。流水线方式是客户在收到HTTP的响应报文之前就能接着发送新的请求报文。与之相对应的非流水线方式是客户在收到前一个响应后才能发送下一个请求。</li>
+<li><strong>错误状态响应码</strong> :在HTTP1.1中新增了24个错误状态响应码，如409（Conflict）表示请求的资源与资源的当前状态发生冲突；410（Gone）表示服务器上的某个资源被永久性的删除。</li>
+<li><strong>缓存处理</strong> :在HTTP1.0中主要使用header里的If-Modified-Since,Expires来做为缓存判断的标准，HTTP1.1则引入了更多的缓存控制策略例如Entity tag，If-Unmodified-Since, If-Match, If-None-Match等更多可供选择的缓存头来控制缓存策略。</li>
+<li><strong>带宽优化及网络连接的使用</strong> :HTTP1.0中，存在一些浪费带宽的现象，例如客户端只是需要某个对象的一部分，而服务器却将整个对象送过来了，并且不支持断点续传功能，HTTP1.1则在请求头引入了range头域，它允许只请求资源的某个部分，即返回码是206（Partial Content），这样就方便了开发者自由的选择以便于充分利用带宽和连接。</li>
+</ol>
+<h3 id="请求和响应报文"><a href="#请求和响应报文" class="headerlink" title="请求和响应报文"></a>请求和响应报文</h3><h4 id="请求报文"><a href="#请求报文" class="headerlink" title="请求报文"></a>请求报文</h4><p><img src="http://m.qpic.cn/psb?/V11tv2Vw2h2WsJ/mkJaDOUBzk87ThnK15P3txuYPndh*ZE.fSG4NT7DD0c!/b/dL4AAAAAAAAA&bo=kALdAJAC3QADCSw!&rf=viewer_4" alt="img"></p>
+<h4 id="响应报文"><a href="#响应报文" class="headerlink" title="响应报文"></a>响应报文</h4><p><img src="http://m.qpic.cn/psb?/V11tv2Vw2h2WsJ/zJyJco59whskn9W9AoddItbQ6kJgG.hSY470evBfB2A!/b/dL8AAAAAAAAA&bo=wAILAcACCwEDGTw!&rf=viewer_4" alt="img"></p>
+<h3 id="HTTP-与-HTTPS"><a href="#HTTP-与-HTTPS" class="headerlink" title="HTTP 与 HTTPS"></a>HTTP 与 HTTPS</h3><ol>
+<li><p><strong>端口</strong> ：HTTP的URL由“http://”起始且默认使用端口80，而HTTPS的URL由“https://”起始且默认使用端口443。</p>
+</li>
+<li><p>安全性和资源消耗：</p>
+<p>HTTP协议运行在TCP之上，所有传输的内容都是明文，客户端和服务器端都无法验证对方的身份。HTTPS是运行在SSL/TLS之上的HTTP协议，SSL/TLS 运行在TCP之上。所有传输的内容都经过加密，加密采用对称加密，但对称加密的密钥用服务器方的证书进行了非对称加密。所以说，HTTP 安全性没有 HTTPS高，但是 HTTPS 比HTTP耗费更多服务器资源。</p>
+<ul>
+<li>对称加密：密钥只有一个，加密解密为同一个密码，且加解密速度快，典型的对称加密算法有DES、AES等；</li>
+<li>非对称加密：密钥成对出现（且根据公钥无法推知私钥，根据私钥也无法推知公钥），加密解密使用不同密钥（公钥加密需要私钥解密，私钥加密需要公钥解密），相对对称加密速度较慢，典型的非对称加密算法有RSA、DSA等。</li>
+</ul>
+</li>
+</ol>
+<h3 id="GET-与-POST"><a href="#GET-与-POST" class="headerlink" title="GET 与 POST"></a>GET 与 POST</h3><h4 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h4><p>GET 用于获取资源，而 POST 用于传输实体主体。</p>
+<h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><p>GET 和 POST 的请求都能使用额外的参数，但是 GET 的参数是以查询字符串出现在 URL 中，而 POST 的参数存储在实体主体中。不能因为 POST 参数存储在实体主体中就认为它的安全性更高，因为照样可以通过一些抓包工具（Fiddler）查看。</p>
+<p>因为 URL 只支持 ASCII 码，因此 GET 的参数中如果存在中文等字符就需要先进行编码。例如 <code>中文</code> 会转换为 <code>%E4%B8%AD%E6%96%87</code>，而空格会转换为 <code>%20</code>。POST 参数支持标准字符集。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">GET /test/demo_form.asp?name1=value1&amp;name2=value2 HTTP/1.1Copy to clipboardErrorCopied</span><br><span class="line"><span class="keyword">POST</span> <span class="string">/test/demo_form.asp</span> HTTP/1.1</span><br><span class="line"><span class="attribute">Host</span>: w3schools.com</span><br><span class="line">name1=value1&amp;name2=value2</span><br></pre></td></tr></table></figure>
+
+<h4 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h4><p>安全的 HTTP 方法不会改变服务器状态，也就是说它只是可读的。</p>
+<p>GET 方法是安全的，而 POST 却不是，因为 POST 的目的是传送实体主体内容，这个内容可能是用户上传的表单数据，上传成功之后，服务器可能把这个数据存储到数据库中，因此状态也就发生了改变。</p>
+<p>安全的方法除了 GET 之外还有：HEAD、OPTIONS。</p>
+<p>不安全的方法除了 POST 之外还有 PUT、DELETE。</p>
+<h4 id="幂等性"><a href="#幂等性" class="headerlink" title="幂等性"></a>幂等性</h4><p>幂等的 HTTP 方法，同样的请求被执行一次与连续执行多次的效果是一样的，服务器的状态也是一样的。换句话说就是，幂等方法不应该具有副作用（统计用途除外）。</p>
+<p>所有的安全方法也都是幂等的。</p>
+<p>在正确实现的条件下，GET，HEAD，PUT 和 DELETE 等方法都是幂等的，而 POST 方法不是。</p>
+<p>GET /pageX HTTP/1.1 是幂等的，连续调用多次，客户端接收到的结果都是一样的：</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">GET</span> <span class="string">/pageX</span> HTTP/1.1</span><br><span class="line"><span class="keyword">GET</span> <span class="string">/pageX</span> HTTP/1.1</span><br><span class="line"><span class="keyword">GET</span> <span class="string">/pageX</span> HTTP/1.1</span><br><span class="line"><span class="keyword">GET</span> <span class="string">/pageX</span> HTTP/1.1</span><br></pre></td></tr></table></figure>
+
+<p>POST /add_row HTTP/1.1 不是幂等的，如果调用多次，就会增加多行记录：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">POST /add_row HTTP/1.1   -&gt; Adds a 1nd row</span><br><span class="line">POST /add_row HTTP/1.1   -&gt; Adds a 2nd row</span><br><span class="line">POST /add_row HTTP/1.1   -&gt; Adds a 3rd row</span><br></pre></td></tr></table></figure>
+
+<p>DELETE /idX/delete HTTP/1.1 是幂等的，即使不同的请求接收到的状态码不一样：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">DELETE /idX/delete HTTP/1.1   -&gt; Returns 200 if idX exists</span><br><span class="line">DELETE /idX/delete HTTP/1.1   -&gt; Returns 404 as it just got deleted</span><br><span class="line">DELETE /idX/delete HTTP/1.1   -&gt; Returns 404</span><br></pre></td></tr></table></figure>
+
+<h4 id="可缓存"><a href="#可缓存" class="headerlink" title="可缓存"></a>可缓存</h4><p>如果要对响应进行缓存，需要满足以下条件：</p>
+<ul>
+<li>请求报文的 HTTP 方法本身是可缓存的，包括 GET 和 HEAD，但是 PUT 和 DELETE 不可缓存，POST 在多数情况下不可缓存的。</li>
+<li>响应报文的状态码是可缓存的，包括：200, 203, 204, 206, 300, 301, 404, 405, 410, 414, and 501。</li>
+<li>响应报文的 Cache-Control 首部字段没有指定不进行缓存。</li>
+</ul>
+<h4 id="XMLHttpRequest"><a href="#XMLHttpRequest" class="headerlink" title="XMLHttpRequest"></a>XMLHttpRequest</h4><p>为了阐述 POST 和 GET 的另一个区别，需要先了解 XMLHttpRequest：</p>
+<blockquote>
+<p>XMLHttpRequest 是一个 API，它为客户端提供了在客户端和服务器之间传输数据的功能。它提供了一个通过 URL 来获取数据的简单方式，并且不会使整个页面刷新。这使得网页只更新一部分页面而不会打扰到用户。XMLHttpRequest 在 AJAX 中被大量使用。</p>
+</blockquote>
+<ul>
+<li>在使用 XMLHttpRequest 的 POST 方法时，浏览器会先发送 Header 再发送 Data。但并不是所有浏览器会这么做，例如火狐就不会。</li>
+<li>而 GET 方法 Header 和 Data 会一起发送。</li>
+</ul>
+<h3 id="HTTP请求的-7-个步骤"><a href="#HTTP请求的-7-个步骤" class="headerlink" title="HTTP请求的 7 个步骤"></a>HTTP请求的 7 个步骤</h3><p>HTTP通信机制是在一次完整的HTTP通信过程中，Web浏览器与Web服务器之间将完成下列7个步骤：</p>
+<p>建立TCP连接-&gt;发送请求行-&gt;发送请求头-&gt;（到达服务器）发送状态行-&gt;发送响应头-&gt;发送响应数据-&gt;断TCP连接</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/computer-network/" rel="tag"># computer network</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/26/%E5%89%91%E6%8C%87Java/" rel="next" title="剑指Java">
+                <i class="fa fa-chevron-left"></i> 剑指Java
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/head.jpg"
+                alt="Mr.Zhang" />
+            
+              <p class="site-author-name" itemprop="name">Mr.Zhang</p>
+              <p class="site-description motion-element" itemprop="description">爱学习的小学生</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7Carchive">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机网络体系结构"><span class="nav-number">1.</span> <span class="nav-text">计算机网络体系结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#OSI"><span class="nav-number">1.1.</span> <span class="nav-text">OSI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五层协议"><span class="nav-number">1.2.</span> <span class="nav-text">五层协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-IP"><span class="nav-number">1.3.</span> <span class="nav-text">TCP/IP</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP的三次握手"><span class="nav-number">2.</span> <span class="nav-text">TCP的三次握手</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#传输控制协议-TCP-简介"><span class="nav-number">2.1.</span> <span class="nav-text">传输控制协议 TCP 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-报文头"><span class="nav-number">2.2.</span> <span class="nav-text">TCP 报文头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三次握手"><span class="nav-number">2.3.</span> <span class="nav-text">三次握手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要三次连接"><span class="nav-number">2.4.</span> <span class="nav-text">为什么要三次连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于建连接时SYN超时"><span class="nav-number">2.5.</span> <span class="nav-text">关于建连接时SYN超时</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于SYN-Flood攻击"><span class="nav-number">2.6.</span> <span class="nav-text">关于SYN Flood攻击</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#保活机制"><span class="nav-number">2.7.</span> <span class="nav-text">保活机制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四次挥手"><span class="nav-number">3.</span> <span class="nav-text">四次挥手</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#四次挥手的原因"><span class="nav-number">3.1.</span> <span class="nav-text">四次挥手的原因</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TIME-WAIT"><span class="nav-number">3.2.</span> <span class="nav-text">TIME_WAIT</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-和-UDP-的区别"><span class="nav-number">4.</span> <span class="nav-text">TCP 和 UDP 的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#UPD-的特点"><span class="nav-number">4.1.</span> <span class="nav-text">UPD 的特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对比"><span class="nav-number">4.2.</span> <span class="nav-text">对比</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-的滑动窗口"><span class="nav-number">5.</span> <span class="nav-text">TCP 的滑动窗口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#重要概念"><span class="nav-number">5.1.</span> <span class="nav-text">重要概念</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP"><span class="nav-number">6.</span> <span class="nav-text">HTTP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GET-和-POST-区别"><span class="nav-number">6.1.</span> <span class="nav-text">GET 和 POST 区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie-和-Session-的区别"><span class="nav-number">6.2.</span> <span class="nav-text">Cookie 和 Session 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP-和-HTTPs-的区别"><span class="nav-number">6.3.</span> <span class="nav-text">HTTP 和 HTTPs 的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SSL-Security-Sockets-Layer-安全套接层"><span class="nav-number">6.3.1.</span> <span class="nav-text">SSL (Security Sockets Layer) 安全套接层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#区别"><span class="nav-number">6.3.2.</span> <span class="nav-text">区别</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Socket"><span class="nav-number">7.</span> <span class="nav-text">Socket</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#QA"><span class="nav-number">8.</span> <span class="nav-text">QA</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#OSI与TCP-IP的协议"><span class="nav-number">8.1.</span> <span class="nav-text">OSI与TCP/IP的协议</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#应用层"><span class="nav-number">8.1.1.</span> <span class="nav-text">应用层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运输层"><span class="nav-number">8.1.2.</span> <span class="nav-text">运输层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网络层"><span class="nav-number">8.1.3.</span> <span class="nav-text">网络层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据链路层"><span class="nav-number">8.1.4.</span> <span class="nav-text">数据链路层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#物理层"><span class="nav-number">8.1.5.</span> <span class="nav-text">物理层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结一下"><span class="nav-number">8.1.6.</span> <span class="nav-text">总结一下</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-三次握手和四次挥手"><span class="nav-number">8.2.</span> <span class="nav-text">TCP 三次握手和四次挥手</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要三次握手"><span class="nav-number">8.2.1.</span> <span class="nav-text">为什么要三次握手</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要传回-SYN"><span class="nav-number">8.2.2.</span> <span class="nav-text">为什么要传回 SYN</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#传了-SYN-为啥还要传-ACK"><span class="nav-number">8.2.3.</span> <span class="nav-text">传了 SYN,为啥还要传 ACK</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要四次挥手"><span class="nav-number">8.2.4.</span> <span class="nav-text">为什么要四次挥手</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP、UDP-协议的区别"><span class="nav-number">8.3.</span> <span class="nav-text">TCP、UDP 协议的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-协议如何保证可靠传输"><span class="nav-number">8.4.</span> <span class="nav-text">TCP 协议如何保证可靠传输</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ARQ协议"><span class="nav-number">8.4.1.</span> <span class="nav-text">ARQ协议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#停止等待ARQ协议"><span class="nav-number">8.4.2.</span> <span class="nav-text">停止等待ARQ协议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#滑动窗口和流量控制"><span class="nav-number">8.4.3.</span> <span class="nav-text">滑动窗口和流量控制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拥塞控制"><span class="nav-number">8.4.4.</span> <span class="nav-text">拥塞控制</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#URL-到网页显示"><span class="nav-number">8.5.</span> <span class="nav-text">URL 到网页显示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#各种协议与HTTP协议"><span class="nav-number">8.6.</span> <span class="nav-text">各种协议与HTTP协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP长连接、短连接"><span class="nav-number">8.7.</span> <span class="nav-text">HTTP长连接、短连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP状态保存机制"><span class="nav-number">8.8.</span> <span class="nav-text">HTTP状态保存机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie、Session的解析"><span class="nav-number">8.9.</span> <span class="nav-text">Cookie、Session的解析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#浏览器禁用-Cookie"><span class="nav-number">8.9.1.</span> <span class="nav-text">浏览器禁用 Cookie</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cookie-与-Session-选择"><span class="nav-number">8.9.2.</span> <span class="nav-text">Cookie 与 Session 选择</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie"><span class="nav-number">8.10.</span> <span class="nav-text">Cookie</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#用途"><span class="nav-number">8.10.1.</span> <span class="nav-text">用途</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建过程"><span class="nav-number">8.10.2.</span> <span class="nav-text">创建过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分类"><span class="nav-number">8.10.3.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#作用域"><span class="nav-number">8.10.4.</span> <span class="nav-text">作用域</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Session"><span class="nav-number">8.11.</span> <span class="nav-text">Session</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP-1-0与HTTP-1-1"><span class="nav-number">8.12.</span> <span class="nav-text">HTTP 1.0与HTTP 1.1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#请求和响应报文"><span class="nav-number">8.13.</span> <span class="nav-text">请求和响应报文</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#请求报文"><span class="nav-number">8.13.1.</span> <span class="nav-text">请求报文</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#响应报文"><span class="nav-number">8.13.2.</span> <span class="nav-text">响应报文</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP-与-HTTPS"><span class="nav-number">8.14.</span> <span class="nav-text">HTTP 与 HTTPS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GET-与-POST"><span class="nav-number">8.15.</span> <span class="nav-text">GET 与 POST</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#作用"><span class="nav-number">8.15.1.</span> <span class="nav-text">作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参数"><span class="nav-number">8.15.2.</span> <span class="nav-text">参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安全"><span class="nav-number">8.15.3.</span> <span class="nav-text">安全</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#幂等性"><span class="nav-number">8.15.4.</span> <span class="nav-text">幂等性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可缓存"><span class="nav-number">8.15.5.</span> <span class="nav-text">可缓存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#XMLHttpRequest"><span class="nav-number">8.15.6.</span> <span class="nav-text">XMLHttpRequest</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP请求的-7-个步骤"><span class="nav-number">8.16.</span> <span class="nav-text">HTTP请求的 7 个步骤</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mr.Zhang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
