@@ -1841,7 +1841,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #1bffa3;
+  background: #25ffff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3138,11 +3138,4 @@ pre .javascript .function {
   .pagination {
     margin: 8px 0 0;
   }
-}
-.post {
-  margin-top: 5px;
-  margin-bottom: 2px;
-  padding: 1px;
-  -webkit-box-shadow: 0 0 2px rgba(255,246,143,0.5);
-  -moz-box-shadow: 0 0 2px rgba(238,230,133,0.5);
 }
