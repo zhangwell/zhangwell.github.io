@@ -1841,7 +1841,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #24ad49;
+  background: #424650;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3148,6 +3148,23 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+}
+.header {
+  background: url("/images/meta.png") none repeat scroll !important;
+}
+.sidebar {
+  background: url("/images/meta.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.sidebar p,
+.sidebar span,
+.sidebar a {
+  color: #fff;
+}
+.site-meta {
+  background: url("/images/meta.png");
 }
 .code ::selection {
   background: #2593a6;
