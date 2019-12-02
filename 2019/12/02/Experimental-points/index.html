@@ -94,7 +94,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="paper," />
 
 
 
@@ -105,13 +105,15 @@
 
 
 
-<meta name="description" content="爱学习的小学生">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Well">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;tags&#x2F;computer-network&#x2F;index.html">
+<meta name="description" content="引言：  论文实验要点，一些简要的安装、执行和debug命令行记录">
+<meta name="keywords" content="paper">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Experimental points">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;02&#x2F;Experimental-points&#x2F;index.html">
 <meta property="og:site_name" content="Well">
-<meta property="og:description" content="爱学习的小学生">
+<meta property="og:description" content="引言：  论文实验要点，一些简要的安装、执行和debug命令行记录">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-12-02T03:09:28.223Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -142,13 +144,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/computer-network/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/12/02/Experimental-points/"/>
 
 
 
 
 
-  <title>标签: computer network | Well</title>
+  <title>Experimental points | Well</title>
   
 
 
@@ -167,7 +169,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -305,54 +307,187 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>computer network<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/02/Experimental-points/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.Zhang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Well">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/11/22/ComputerNetworks/" itemprop="url">
-              
-                <span itemprop="name">ComputerNetworks</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Experimental points</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-11-22T19:17:41+08:00"
-              content="2019-11-22" >
-          11-22
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-02T10:37:15+08:00">
+                2019-12-02
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Postgraduate/" itemprop="url" rel="index">
+                    <span itemprop="name">Postgraduate</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    </div>
+      
 
+      
+        <p>引言：</p>
+<blockquote>
+<p>论文实验要点，一些简要的安装、执行和debug命令行记录</p>
+</blockquote>
+<a id="more"></a>
+
+<h3 id="运行环境"><a href="#运行环境" class="headerlink" title="运行环境"></a>运行环境</h3><h4 id="训练环境"><a href="#训练环境" class="headerlink" title="训练环境"></a>训练环境</h4><p>服务器：<code>192.168.71.215</code>，用户：<code>root</code>，文件位置：<code>home/zw/</code>，硬件：<code>Tesla P40</code>，conda虚拟环境：<code>zw</code>，版本：<code>python=3.6</code>，<code>tensorflow-gpu=1.14</code></p>
+<h4 id="展示环境"><a href="#展示环境" class="headerlink" title="展示环境"></a>展示环境</h4><p>本机，conda虚拟环境：<code>zw</code>，版本：<code>python=3.6</code>，<code>tensorflow-gpu=1.12</code></p>
+<h3 id="CNN迁移学习要点"><a href="#CNN迁移学习要点" class="headerlink" title="CNN迁移学习要点"></a>CNN迁移学习要点</h3><p><strong>1.模型训练</strong></p>
+<p><strong>2.模型精度</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> keras.preprocessing.image <span class="keyword">import</span> ImageDataGenerator</span><br><span class="line"><span class="keyword">from</span> keras.models <span class="keyword">import</span> Sequential,load_model</span><br><span class="line"></span><br><span class="line">test_datagen = ImageDataGenerator(rescale=<span class="number">1.</span>/<span class="number">255</span>)</span><br><span class="line">test_generator = test_datagen.flow_from_directory(<span class="string">'/home/zw/isic_2019_dataset/test'</span>,target_size=(<span class="number">448</span>, <span class="number">448</span>),batch_size=<span class="number">64</span>,shuffle=<span class="literal">False</span>)</span><br><span class="line">nsteps=len(test_generator)</span><br><span class="line"></span><br><span class="line"><span class="comment"># model = load_model("model/BCNN_keras/model-9c.h5")</span></span><br><span class="line"><span class="comment"># model.load_weights('./model/BCNN_keras/model-9c.h5')</span></span><br><span class="line"></span><br><span class="line">test_loss, test_acc = model.evaluate_generator(test_generator, steps=nsteps) </span><br><span class="line"><span class="comment"># test_loss, test_acc = model.evaluate(test_generator, steps=5) </span></span><br><span class="line">print(<span class="string">'test acc:'</span>, test_acc)</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.结果指标</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> classification_report, confusion_matrix</span><br><span class="line"><span class="keyword">from</span> keras.preprocessing.image <span class="keyword">import</span> ImageDataGenerator</span><br><span class="line"></span><br><span class="line">test_datagen = ImageDataGenerator(rescale=<span class="number">1.</span>/<span class="number">255</span>)</span><br><span class="line">test_generator = test_datagen.flow_from_directory(<span class="string">'/home/zw/isic_2019_dataset/test'</span>,target_size=(<span class="number">448</span>, <span class="number">448</span>),batch_size=<span class="number">64</span>,shuffle=<span class="literal">False</span>)</span><br><span class="line">nsteps=len(test_generator)</span><br><span class="line"></span><br><span class="line">y_true=test_generator.classes</span><br><span class="line">class_label=test_generator.class_indices.keys()</span><br><span class="line">test_generator.reset()</span><br><span class="line">y_pred = model.predict_generator(test_generator,steps=nsteps)</span><br><span class="line">y_pred_final = np.argmax(y_pred, axis=<span class="number">1</span>)</span><br><span class="line">print(<span class="string">'Confusion Matrix'</span>)</span><br><span class="line">cm=confusion_matrix(y_true, y_pred_final)</span><br><span class="line">print(cm)</span><br><span class="line">print(<span class="string">'Classification Report'</span>)</span><br><span class="line">print(classification_report(y_true, y_pred_final, target_names=class_label))</span><br></pre></td></tr></table></figure>
+
+<p><strong>4.图像展示</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> itertools</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_confusion_matrix</span><span class="params">(cm, classes,</span></span></span><br><span class="line"><span class="function"><span class="params">                          normalize=False,</span></span></span><br><span class="line"><span class="function"><span class="params">                          title=<span class="string">'Confusion matrix'</span>,</span></span></span><br><span class="line"><span class="function"><span class="params">                          cmap=plt.cm.Blues)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> normalize:</span><br><span class="line">        cm = cm.astype(<span class="string">'float'</span>) / cm.sum(axis=<span class="number">1</span>)[:, np.newaxis]</span><br><span class="line">        print(<span class="string">"Normalized confusion matrix"</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">'Confusion matrix, without normalization'</span>)</span><br><span class="line">    plt.imshow(cm, interpolation=<span class="string">'nearest'</span>, cmap=cmap)</span><br><span class="line">    plt.title(title)</span><br><span class="line">    plt.colorbar()</span><br><span class="line">    tick_marks = np.arange(len(classes))</span><br><span class="line">    plt.xticks(tick_marks, classes, rotation=<span class="number">90</span>)</span><br><span class="line">    plt.yticks(tick_marks, classes)</span><br><span class="line"></span><br><span class="line">    fmt = <span class="string">'.2f'</span> <span class="keyword">if</span> normalize <span class="keyword">else</span> <span class="string">'d'</span></span><br><span class="line">    thresh = cm.max() / <span class="number">2.</span></span><br><span class="line">    <span class="keyword">for</span> i, j <span class="keyword">in</span> itertools.product(range(cm.shape[<span class="number">0</span>]), range(cm.shape[<span class="number">1</span>])):</span><br><span class="line">        plt.text(j, i, format(cm[i, j], fmt),</span><br><span class="line">                 horizontalalignment=<span class="string">"center"</span>,</span><br><span class="line">                 color=<span class="string">"white"</span> <span class="keyword">if</span> cm[i, j] &gt; thresh <span class="keyword">else</span> <span class="string">"black"</span>)</span><br><span class="line"></span><br><span class="line">    plt.ylabel(<span class="string">'True label'</span>)</span><br><span class="line">    plt.xlabel(<span class="string">'Predicted label'</span>)</span><br><span class="line">    plt.tight_layout()</span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(<span class="number">10</span>, <span class="number">10</span>))</span><br><span class="line">plot_confusion_matrix(cm, classes=class_label,title=<span class="string">'Confusion matrix, without normalization'</span>)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<h3 id="TensorBoard展示"><a href="#TensorBoard展示" class="headerlink" title="TensorBoard展示"></a>TensorBoard展示</h3><p>本机展示，一行命令</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">activate zw</span><br><span class="line">tensorboard --logdir=F:\CondaProjects\tensorboard\vgg-<span class="number">8</span> --host=<span class="number">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/paper/" rel="tag"># paper</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/29/Algorithm-Sort/" rel="next" title="Algorithm-Sort">
+                <i class="fa fa-chevron-left"></i> Algorithm-Sort
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -360,6 +495,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -380,8 +519,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -467,6 +615,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#运行环境"><span class="nav-number">1.</span> <span class="nav-text">运行环境</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#训练环境"><span class="nav-number">1.1.</span> <span class="nav-text">训练环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#展示环境"><span class="nav-number">1.2.</span> <span class="nav-text">展示环境</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CNN迁移学习要点"><span class="nav-number">2.</span> <span class="nav-text">CNN迁移学习要点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TensorBoard展示"><span class="nav-number">3.</span> <span class="nav-text">TensorBoard展示</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -607,6 +771,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
