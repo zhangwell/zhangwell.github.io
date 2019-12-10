@@ -412,127 +412,17 @@
 
       
         
-          
-            <p>引言：</p>
+          <p>引言：</p>
 <blockquote>
 <p><a href="https://www.bilibili.com/video/av21376839" target="_blank" rel="noopener">计算机科学速成课</a></p>
 </blockquote>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209102345330.png" alt="image-20191209102345330"></p>
-<h2 id="第-1-集：计算机早期历史"><a href="#第-1-集：计算机早期历史" class="headerlink" title="第 1 集：计算机早期历史"></a>第 1 集：计算机早期历史</h2><p>提到的设备：算盘 → 步进计算器 → 差分机 → 分析机 → 打孔卡片制表机<br>提到的人名：Charles Babbage, Ada Lovelace</p>
-<p>02:27 最早的计算设备是算盘，举例如何使用<br>04:31 Computer 从指代职业变成指代机器<br>04:57 机器里有名的是：步进计算器。第一个可以做加减乘除的机器<br>06:44 炮弹为了精准，要计算弹道，二战是查表来做。但每次改设计了就需要做一张新表<br>07:30 Charles Babbage 提出了 “差分机”, 在构造差分机期间，想出了分析机, 分析机是通用计算机<br>08:50 Lovelace 给分析机写了假想程序，因此成为了第一位程序员<br>09:25 人口普查 10 年一次. Herman Hollerith 的打孔卡片制表机大大提升了效率</p>
-<h2 id="第-2-集：电子计算机"><a href="#第-2-集：电子计算机" class="headerlink" title="第 2 集：电子计算机"></a>第 2 集：电子计算机</h2><p>提到的设备：继电器 → 真空管 → 晶体管</p>
-<p>00:17 20世纪的发展要求更强的计算能力。柜子大小的计算机发展到房间大小<br>01:06 哈佛 Mark 1 号，IBM 1944 年做的<br>02:25 继电器，继电器一秒最多 50 次开关<br>03:24 继电器出 bug<br>03:49 1904 年，热电子管出现，第一个真空管。改进后变成和继电器的功能一样<br>05:34 “巨人1号” 计算机在英国 布莱切利园 首次大规模使用真空管。但编程麻烦，还要配置<br>06:40 1946 年，宾夕法尼亚大学的 ENIAC 是第一个通用可编程计算机<br>07:36 1947 年，贝尔实验室做出了晶体管，晶体管有诸多好处，IBM 很快全面转向晶体管<br>09:27 硅谷的典故：很多晶体管和半导体的开发都是这里做的。而生产半导体最常见的材料是硅<br>09:41 肖克利半导体 → 仙童半导体 → 英特尔</p>
-<h2 id="第-3-集：布尔逻辑和逻辑门"><a href="#第-3-集：布尔逻辑和逻辑门" class="headerlink" title="第 3 集：布尔逻辑和逻辑门"></a>第 3 集：布尔逻辑和逻辑门</h2><p>01:00 什么是二进制, 为什么用二进制, 布尔逻辑<br>02:46 3个基本操作：NOT，AND，OR<br>02:51 解释3个基本操作<br>07:11 XOR 异或</p>
-<h2 id="第-4-集：二进制"><a href="#第-4-集：二进制" class="headerlink" title="第 4 集：二进制"></a>第 4 集：二进制</h2><p>00:46 用十进制举例二进制的原理，演示二进制加法。存储单位 MB GB TB 等<br>05:30 正数，负数，整数，浮点数的表示<br>07:20 美国信息交换标准代码 - ASCII, 用来表示字符<br>09:00 UNICODE 1992 年诞生，是字符编码标准， 解决 ASCII 不够表达所有语言的问题</p>
-<h2 id="第-5-集：算数逻辑单元-ALU"><a href="#第-5-集：算数逻辑单元-ALU" class="headerlink" title="第 5 集：算数逻辑单元 - ALU"></a>第 5 集：算数逻辑单元 - ALU</h2><p>00:03 简单介绍 ALU ，英特尔 74181<br>01:24 ALU 有 2 个单元，1 个算术单元和 1 个逻辑单元</p>
-<p>01:32 算术单元<br>半加器 (处理1个 bit，2个输入)</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209091108226.png" alt="image-20191209091108226"></p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209091134336.png" alt="image-20191209091134336"></p>
-<p>全加器 (处理1个 bit，3个输入)</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209091320872.png" alt="image-20191209091320872"></p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209091401064.png" alt="image-20191209091401064"></p>
-<p>8 bit 加法 (1个半加器，7个全加器）</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209091505711.png" alt="image-20191209091505711"></p>
-<p>溢出的概念，吃豆人的例子<br>乘法除法</p>
-<p>07:32 逻辑单元<br>检测数字是否为 0 的电路（一堆 OR 门最后加个 NOT 门）<br>ALU 抽象成一个 V 符号<br>Flag 标志（是否相等，是否小于，是否溢出等等）</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209092043700.png" alt="image-20191209092043700"></p>
-<h2 id="第-6-集：寄存器和内存"><a href="#第-6-集：寄存器和内存" class="headerlink" title="第 6 集：寄存器和内存"></a>第 6 集：寄存器和内存</h2><p>本集重点是 Memory （存储 / 内存 两种含义）</p>
-<p>03:30 存 1 位 (Gated Latch - 锁存器）</p>
-<p>永久存1（逻辑与输出接回输入）：</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209092532043.png" alt="image-20191209092532043"></p>
-<p>永久存0（逻辑和输出接回输入）：</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209092711762.png" alt="image-20191209092711762"></p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209092737143.png" alt="image-20191209092737143"></p>
-<p>将电路连接起来：</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209092802131.png" alt="image-20191209092802131"></p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209094109974.png" alt="image-20191209094109974"></p>
-<p>换个方式</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209095304803.png" alt="image-20191209095304803"></p>
-<p>数据输入线：设为0或者1来存储值<br>启动线：允许启动或关闭存储</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209100017621.png" alt="image-20191209100017621"></p>
-<p>向上抽象</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209095704584.png" alt="image-20191209095704584"></p>
-<p>允许写入线的开关控制数据输入线的值能否存储入门锁中。</p>
-<p>04:48 存 8 位 (Register - 寄存器)</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209100142534.png" alt="image-20191209100142534"></p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209100219842.png" alt="image-20191209100219842"></p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209100256357.png" alt="image-20191209100256357"></p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209100315457.png" alt="image-20191209100315457"></p>
-<p>05:46 16x16 的矩阵存 256 位</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209100449795.png"><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209100515128.png" alt></p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209100433081.png" alt="image-20191209100433081"></p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209100830634.png" alt="image-20191209100830634"></p>
-<p>数据选择器/多路复用器 (Multiplexer) 解码 8 位地址，定位到单个锁存器</p>
-<p>07:38 4 位代表行， 4 位代表列</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209101103207.png" alt="image-20191209101103207"></p>
-<p>08:16 组合 256 位内存 + 多路复用器<br>09:01 可寻址的 256 字节 内存</p>
-<p>向上抽象</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209101217062.png" alt="image-20191209101217062"></p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209101313055.png" alt="image-20191209101313055"></p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209101340409.png" alt="image-20191209101340409"></p>
-<p>再次抽象</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209101509140.png" alt="image-20191209101509140"><br><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209101548861.png" alt="image-20191209101548861"></p>
-<p>一条1980年代的内存，1M 大小</p>
-<p>10:14 8个模块，每个模块有32个小方块，<br>每个小方块有 4 个小块，每个小块是 128 位 x 64 位</p>
-<h2 id="第-7-集：中央处理器（CPU"><a href="#第-7-集：中央处理器（CPU" class="headerlink" title="第 7 集：中央处理器（CPU)"></a>第 7 集：中央处理器（CPU)</h2><p>重点</p>
-<ol>
-<li>拼个 CPU 出来</li>
-<li>CPU 怎么执行命令</li>
-</ol>
-<p>01:00 RAM + 寄存器 + ALU 做个 CPU</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209214658376.png" alt="image-20191209214658376"></p>
-<p>04:00 解释 “取指令→解释→执行” 这个循环</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209214742706.png" alt="image-20191209214742706"></p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209215049890.png" alt="image-20191209215049890"></p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209215257090.png" alt="image-20191209215257090"></p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209215331027.png" alt="image-20191209215331027"></p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209215530912.png" alt="image-20191209215530912"></p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209215620939.png" alt="image-20191209215620939"></p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209215726423.png" alt="image-20191209215726423"></p>
-<p>上述就完成了将RAM中的值14存入寄存器A中</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209215924813.png" alt="image-20191209215924813"></p>
-<p>开始执行下一条指令</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209220015449.png" alt="image-20191209220015449"></p>
-<p>向上抽象后，完成下一条指令</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209220218556.png" alt="image-20191209220218556"></p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209220434146.png" alt="image-20191209220434146"></p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209220528278.png" alt="image-20191209220528278"></p>
-<p>整个过程是从内存中加载两个数据，相加后，结果再存到内存中</p>
-<p>08:00 时钟是什么, 时钟速度和赫兹</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209220743313.png" alt="image-20191209220743313"></p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209220822119.png" alt="image-20191209220822119"></p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209221031800.png" alt="image-20191209221031800"></p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209221118156.png" alt="image-20191209221118156"></p>
-<p>10:00 超频提升性能, 降频省电</p>
-<h2 id="第-8-集：指令和程序"><a href="#第-8-集：指令和程序" class="headerlink" title="第 8 集：指令和程序"></a>第 8 集：指令和程序</h2><p>本集重点：一步步带你运行一遍程序</p>
-<p>00:45 回顾上集的例子程序，一步步讲解。介绍”指令集”的概念<br>LOAD_A，LOAD_B，SUB，JUMP，ADD，HALT 等指令<br>05:16 带条件跳转，JUMP NEGATIVE 是负数才跳转，还有其他类型的 JUMP<br>08:00 真正现代 CPU 用更多指令集。位数更长。<br>09:07 1971年的英特尔 4004 处理器，有 46 个指令</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191209222131963.png" alt="image-20191209222131963"></p>
-<p>09:36 如今英特尔酷睿 i7, 有上千条指令</p>
-<h2 id="第-9-集：高级-CPU-设计"><a href="#第-9-集：高级-CPU-设计" class="headerlink" title="第 9 集：高级 CPU 设计"></a>第 9 集：高级 CPU 设计</h2><p>00:24 早期是加快晶体管切换速度，来提升 CPU 速度<br>01:20 给 CPU 专门的除法电路 + 其他电路来做复杂操作，比如游戏，视频解码<br>02:28 给 CPU 加缓存，提高数据存取速度，更快喂给 CPU，用计算餐馆销售额举例<br>05:13 脏位 - Dirty bit</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191210095155264.png" alt="image-20191210095155264"></p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191210095216725.png" alt="image-20191210095216725"></p>
-<p>05:33 流水线设计，用 1 个洗衣机和 1 个干燥机举例</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191210095351622.png" alt="image-20191210095351622"></p>
-<p>06:01 并行处理 - parallelize</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191210095507564.png" alt="image-20191210095507564"></p>
-<p>07:33 乱序执行 - out-of-order execution<br>08:21 推测执行 - speculative execution<br>08:50 分支预测 - branch prediction<br>09:34 多个 ALU</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191210095800619.png" alt="image-20191210095800619"></p>
-<p>09:54 多核 (Core)</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191210095840819.png" alt="image-20191210095840819"></p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191210095908362.png" alt="image-20191210095908362"></p>
-<p>10:11 多个独立 CPU<br>10:52 超级计算机，中国的”神威 太湖之光”</p>
-<h2 id="第-10-集：早期的编程方式"><a href="#第-10-集：早期的编程方式" class="headerlink" title="第 10 集：早期的编程方式"></a>第 10 集：早期的编程方式</h2><p>本集重点：早期计算机如何编程<br>打孔纸卡 → 插线板 → 面板拨开关</p>
-<p>00:00 开头说本集重点：程序如何进入计算机<br>00:53 拿纺织业举例，给机器编程的需求远在计算机出现前就有了<br>01:41 打孔纸卡 - Punched card<br>02:36 插线板 - Plugboard<br>04:20 冯诺依曼架构 - Von Neumann Architecture<br>07:00 面板编程 - Panel programming<br>07:29 第一款取得商业成功的家用计算机: Altair 8800<br>08:15 编程依然很困难，人们需要更友好更简单的方式编程<br>08:44 下周主题：编程语言</p>
-<h2 id="第-11-集：编程语言发展史"><a href="#第-11-集：编程语言发展史" class="headerlink" title="第 11 集：编程语言发展史"></a>第 11 集：编程语言发展史</h2><p>编程：二进制 → 助记符（汇编器）→ A-0（编译器）→ FORTRAIN</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191210101157518.png" alt="image-20191210101157518"></p>
-<p>01:45 二进制写程序，先纸上写伪代码，手工转二进制，很快就烦了<br>02:28 用 “助记符” 写代码（LOAD_A 14）为了把助记符转二进制，汇编器诞生 (Assembler)</p>
-<p><img src="/2019/12/09/Crash-Course-Computer-Science/image-20191210101410840.png" alt="image-20191210101410840"></p>
-<p>04:32 葛丽丝·霍普 (Grace Hopper) - 哈佛1号计算机首批程序员, 海军军官<br>05:13 Grace 设计了编程语言 A-0<br>05:29 Grace 1952 年做了第一个编译器 (Compiler)，实现 A-0<br>06:29 变量 (Variables)<br>07:01 FORTRAN<br>08:18 COBOL<br>09:25 新语言<br>1960 年代：ALGOL，LISP，BASIC<br>1970 年代：Pascal，C，Smalltalk<br>1980 年代：C++，Objective-C，Perl<br>1990 年代：Python，Ruby，Java</p>
-<h2 id="第-12-集：编程基础-语句和函数"><a href="#第-12-集：编程基础-语句和函数" class="headerlink" title="第 12 集：编程基础 - 语句和函数"></a>第 12 集：编程基础 - 语句和函数</h2><p>00:50 变量, 赋值语句<br>02:08 Grace Hopper 拍虫子游戏<br>02:52 if 判断<br>04:19 while 循环<br>05:48 for 循环<br>07:00 函数<br>11:11 下集介绍算法</p>
-<h2 id="第-13-集：算法入门"><a href="#第-13-集：算法入门" class="headerlink" title="第 13 集：算法入门"></a>第 13 集：算法入门</h2><p>03:00 选择排序 - Selection sort<br>03:52 大 O 表示法 - Big O notation<br>04:31 归并排序 - Merge sort<br>08:03 Dijkstra 算法</p>
-<h2 id="第-14-集：数据结构"><a href="#第-14-集：数据结构" class="headerlink" title="第 14 集：数据结构"></a>第 14 集：数据结构</h2><p>00:39 数组 - Array<br>02:06 字符串 - String<br>03:12 矩阵 - Matrix<br>04:05 结构体 - Struct<br>04:46 指针 - Pointer<br>04:44 节点 - Node<br>04:53 链表 - Linked List<br>06:21 队列 - Queue<br>06:21 栈 - Stack<br>07:31 树 - Tree<br>08:01 二叉树 - Binary Tree<br>08:26 图 - Graph<br>08:50 没时间讲红黑树和堆, 不同数据结构适用不同场景</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/12/09/Crash-Course-Computer-Science/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
