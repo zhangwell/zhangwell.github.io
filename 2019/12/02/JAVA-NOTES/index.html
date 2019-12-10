@@ -113,8 +113,13 @@
 <meta property="og:site_name" content="Well">
 <meta property="og:description" content="引言：   Java学习散落的知识点">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-03T03:14:32.942Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;02&#x2F;JAVA-NOTES&#x2F;926090-20190324114958133-488948960.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;blog.cuzz.site&#x2F;2019&#x2F;04&#x2F;16&#x2F;Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B&#x2F;%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20190416211412.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;blog.cuzz.site&#x2F;2019&#x2F;04&#x2F;16&#x2F;Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B&#x2F;0e75180bf35c40e2921493d0bf6bd684_th.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;blog.cuzz.site&#x2F;2019&#x2F;04&#x2F;16&#x2F;Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B&#x2F;21ebc7e8190c4966948c4ef4424088be_th.png">
+<meta property="og:updated_time" content="2019-12-05T03:25:38.577Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;02&#x2F;JAVA-NOTES&#x2F;926090-20190324114958133-488948960.png">
 
 
 
@@ -434,6 +439,169 @@
 <p>default：只能在本包中可以访问，在其他包即使是继承也不能访问</p>
 <p>protected：比较繁琐，不常用，总结为<strong>不跨包不影响访问，可以看做是public，跨包视为private</strong></p>
 <p>public：均可访问</p>
+<h2 id="SpringBoot与SSM"><a href="#SpringBoot与SSM" class="headerlink" title="SpringBoot与SSM"></a>SpringBoot与SSM</h2><p>首先看搭建 SSM 框架时，我们需要哪些步骤</p>
+<ol>
+<li><p>加相关的 jar 包</p>
+</li>
+<li><p>配置 web.xml，加载 Spring，SpringMVC</p>
+</li>
+<li><p>配置数据库连接，spring 事务</p>
+</li>
+<li><p>配置加载配置文件的读取，开启注解</p>
+</li>
+<li><p>配置日志文件</p>
+</li>
+<li><p>配置完成，部署 tomcat 调试</p>
+</li>
+</ol>
+<p>而这些配置 SpringBoot 都帮我们做好了：</p>
+<p><img src="/2019/12/02/JAVA-NOTES/926090-20190324114958133-488948960.png" alt="img"></p>
+<p>就是这些 starter 依赖，帮我们做了很多配置。</p>
+<p>springboot 框架使用 starter 依赖主要帮我们做了两点：</p>
+<p>1.引入相关的 jar</p>
+<p>2.自动完成 bean 配置。</p>
+<p>总结：</p>
+<ol>
+<li><p>Springboot 将原有的 xml 配置，简化为 java 注解</p>
+</li>
+<li><p>使用 IDE 可以很方便的搭建一个 springboot 项目，选择对应的 maven 依赖，简化Spring应用的初始搭建以及开发过程</p>
+</li>
+<li><p>springboot 有内置的 tomcat 服务器，可以 jar 形式启动一个服务,可以快速部署发布 web 服务</p>
+</li>
+<li><p>springboot 使用 starter 依赖自动完成 bean 配置，，解决 bean 之间的冲突，并引入相关的 jar 包（这一点最重要）</p>
+</li>
+</ol>
+<h2 id="Java内存模型"><a href="#Java内存模型" class="headerlink" title="Java内存模型"></a>Java内存模型</h2><h3 id="并发编程需要解决的问题"><a href="#并发编程需要解决的问题" class="headerlink" title="并发编程需要解决的问题"></a>并发编程需要解决的问题</h3><blockquote>
+<p>线程间<strong>通信</strong>&amp;线程间<strong>同步</strong></p>
+</blockquote>
+<p>线程之间通信机制分为两种：<strong>共享内存</strong>、<strong>消息传递</strong></p>
+<p> <strong>共享内存</strong>通信与同步</p>
+<table>
+<thead>
+<tr>
+<th>操作类型</th>
+<th>实现方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>通信</td>
+<td>线程之间共享程序的公共状态，通过写－读内存中的变量的公共状态进行隐式通信</td>
+</tr>
+<tr>
+<td>同步</td>
+<td>显式进行同步，必须显式制定某个方法或某段代码需要在线程之间互斥执行</td>
+</tr>
+</tbody></table>
+<p><strong>消息传递</strong>通信与同步</p>
+<table>
+<thead>
+<tr>
+<th>操作类型</th>
+<th>实现方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>通信</td>
+<td>线程之间没有公共状态，线程之间通过发送消息显式进行通信</td>
+</tr>
+<tr>
+<td>同步</td>
+<td>隐式进行同步，消息发送必须在消息发送之前</td>
+</tr>
+</tbody></table>
+<p>注意：<strong>java并发采用的是共享内存模型</strong>，java线程之间的通信总是隐式进行的。</p>
+<h3 id="内存模型概念"><a href="#内存模型概念" class="headerlink" title="内存模型概念"></a>内存模型概念</h3><ul>
+<li><p>在Java中所有的实例对象、静态数据域、和数组元素都存储在堆内存当中，堆内存在线程之间是共享的。 ——堆中数据域是线程共享的</p>
+</li>
+<li><p>局部变量、方法定义参数、和异常处理器参数不会在线程之间共享、他们不会有内存可见性问题，也不受内存模型的影响。——线程独享的</p>
+</li>
+</ul>
+<h4 id="JMM简介"><a href="#JMM简介" class="headerlink" title="JMM简介"></a>JMM简介</h4><p>JMM决定一个线程对共享变量的写入何时对另一个线程可见。(可见性保证)</p>
+<blockquote>
+<p>JMM同步规定：</p>
+<ul>
+<li>线程解锁前，必须把共享变量的值刷新回主内存</li>
+<li>线程加锁前，必须读取主内存的最新值到自己的工作内存</li>
+<li>加锁解锁是同一把锁</li>
+</ul>
+</blockquote>
+<ul>
+<li>由于 JVM 运行程序的实体是线程，而每个线程创建时 JVM 都会为其创建一个工作内存，工作内存是每个线程的私有数据区域，而 Java 内存模型中规定所有变量的储存在主内存，主内存是共享内存区域，所有的线程都可以访问，但线程对变量的操作（读取赋值等）必须都工作内存进行看。</li>
+<li>首先要将变量从主内存拷贝的自己的工作内存空间，然后对变量进行操作，操作完成后再将变量写回主内存，不能直接操作主内存中的变量，工作内存中存储着主内存中的变量副本拷贝，前面说过，工作内存是每个线程的私有数据区域，因此不同的线程间无法访问对方的工作内存，线程间的通信(传值)必须通过主内存来完成。</li>
+<li>内存模型图</li>
+</ul>
+<p><img src="http://blog.cuzz.site/2019/04/16/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20190416211412.png" alt="搜狗截图20190416211412"></p>
+<h2 id="并发关键字"><a href="#并发关键字" class="headerlink" title="并发关键字"></a>并发关键字</h2><h3 id="volatile"><a href="#volatile" class="headerlink" title="volatile"></a>volatile</h3><blockquote>
+<p>是 Java 虚拟机提供的轻量级的同步机制</p>
+</blockquote>
+<ul>
+<li>保证可见性</li>
+<li>禁止指令排序</li>
+<li>不保证原子性</li>
+</ul>
+<h4 id="三大特性"><a href="#三大特性" class="headerlink" title="三大特性"></a>三大特性</h4><ul>
+<li><p>可见性</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">VolatileDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Data data = <span class="keyword">new</span> Data();</span><br><span class="line">        <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">            System.out.println(Thread.currentThread().getName() + <span class="string">" coming..."</span>);</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                Thread.sleep(<span class="number">3000</span>);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">            data.addOne();</span><br><span class="line">            System.out.println(Thread.currentThread().getName() + <span class="string">" updated..."</span>);</span><br><span class="line">        &#125;).start();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (data.a == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="comment">// looping</span></span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(Thread.currentThread().getName() + <span class="string">" job is done..."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Data</span> </span>&#123;</span><br><span class="line">    <span class="comment">// int a = 0;</span></span><br><span class="line">    <span class="keyword">volatile</span> <span class="keyword">int</span> a = <span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">addOne</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.a += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 新线程修改a值后，可通知main线程，即可见性</span></span><br></pre></td></tr></table></figure>
+
+<p>如果不加 volatile 关键字，则主线程会进入死循环，加 volatile 则主线程能够退出，说明加了 volatile 关键字变量，当有一个线程修改了值，会马上被另一个线程感知到，当前值作废，从新从主内存中获取值。对其他线程可见，这就叫可见性。</p>
+</li>
+<li><p>原子性</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">VolatileDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">       <span class="comment">// test01();</span></span><br><span class="line">       test02();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 测试原子性</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">test02</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Data data = <span class="keyword">new</span> Data();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">20</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">1000</span>; j++) &#123;</span><br><span class="line">                    data.addOne();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;).start();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 默认有 main 线程和 gc 线程</span></span><br><span class="line">        <span class="keyword">while</span> (Thread.activeCount() &gt; <span class="number">2</span>) &#123;</span><br><span class="line">            Thread.yield();</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(data.a);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Data</span> </span>&#123;</span><br><span class="line">    <span class="keyword">volatile</span> <span class="keyword">int</span> a = <span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">addOne</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.a += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>发现并不能输入 20000</p>
+</li>
+</ul>
+<h4 id="禁止指令排序"><a href="#禁止指令排序" class="headerlink" title="禁止指令排序"></a>禁止指令排序</h4><p>volatile 实现禁止指令重排序的优化，从而避免了多线程环境下程序出现乱序的现象</p>
+<p>先了解一个概念，内存屏障（Memory Barrier）又称内存栅栏，是一个 CPU 指令，他的作用有两个：</p>
+<ul>
+<li>保证特定操作的执行顺序</li>
+<li>保证某些变量的内存可见性（利用该特性实现 volatile 的内存可见性）</li>
+</ul>
+<p>由于编译器个处理器都能执行指令重排序优化，如果在指令间插入一条 Memory Barrier 则会告诉编译器和 CPU，不管什么指令都不能个这条 Memory Barrier 指令重排序，也就是说通过插入内存屏障禁止在内存屏障前后执行重排序优化。内存屏障另一个作用是强制刷出各种 CPU 缓存数据，因此任何 CPU 上的线程都能读取到这些数据的最新版本。</p>
+<p>下面是保守策略下，volatile写插入内存屏障后生成的指令序列示意图：</p>
+<p><img src="http://blog.cuzz.site/2019/04/16/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/0e75180bf35c40e2921493d0bf6bd684_th.png" alt="0e75180bf35c40e2921493d0bf6bd684_th"></p>
+<p>下面是在保守策略下，volatile读插入内存屏障后生成的指令序列示意图：</p>
+<p><img src="http://blog.cuzz.site/2019/04/16/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/21ebc7e8190c4966948c4ef4424088be_th.png" alt="21ebc7e8190c4966948c4ef4424088be_th"></p>
+<h4 id="线程安全性保证"><a href="#线程安全性保证" class="headerlink" title="线程安全性保证"></a>线程安全性保证</h4><ul>
+<li>工作内存与主内存同步延迟现象导致可见性问题<ul>
+<li>可以使用 synchronzied 或 volatile 关键字解决，它们可以使用一个线程修改后的变量立即对其他线程可见</li>
+</ul>
+</li>
+<li>对于指令重排导致可见性问题和有序性问题<ul>
+<li>可以利用 volatile 关键字解决，因为 volatile 的另一个作用就是禁止指令重排序优化</li>
+</ul>
+</li>
+</ul>
+<h3 id="你在哪些地方用到过-volatile"><a href="#你在哪些地方用到过-volatile" class="headerlink" title="你在哪些地方用到过 volatile"></a>你在哪些地方用到过 volatile</h3><h4 id="单例"><a href="#单例" class="headerlink" title="单例"></a>单例</h4><ul>
+<li><p>多线程环境下可能存在的安全问题</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@NotThreadSafe</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton01</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton01 instance = <span class="keyword">null</span>;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton01</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName() + <span class="string">"  construction..."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton01 <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</span><br><span class="line">            instance = <span class="keyword">new</span> Singleton01();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ExecutorService executorService = Executors.newFixedThreadPool(<span class="number">10</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">            executorService.execute(()-&gt; Singleton01.getInstance());</span><br><span class="line">        &#125;</span><br><span class="line">        executorService.shutdown();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>发现构造器里的内容会多次输出</p>
+</li>
+<li><p>双重锁单例</p>
+<ul>
+<li>代码</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton02</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> Singleton02 instance = <span class="keyword">null</span>;</span><br><span class="line">  <span class="function"><span class="keyword">private</span> <span class="title">Singleton02</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName() + <span class="string">"  construction..."</span>);</span><br><span class="line">  &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton02 <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">synchronized</span> (Singleton01<span class="class">.<span class="keyword">class</span>) </span>&#123;</span><br><span class="line">              <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</span><br><span class="line">                    instance = <span class="keyword">new</span> Singleton02();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">      &#125;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ExecutorService executorService = Executors.newFixedThreadPool(<span class="number">10</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">            executorService.execute(()-&gt; Singleton02.getInstance());</span><br><span class="line">      &#125;</span><br><span class="line">        executorService.shutdown();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>如果没有加 volatile 就不一定是线程安全的，原因是指令重排序的存在，加入 volatile 可以禁止指令重排。</p>
+</li>
+<li><p>原因是在于某一个线程执行到第一次检测，读取到的 instance 不为 null 时，<strong>instance 的引用对象可能还没有完成初始化。</strong></p>
+</li>
+<li><p><code>instance = new Singleton()</code> 可以分为以下三步完成</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">memory = allocate();  <span class="comment">// 1.分配对象空间</span></span><br><span class="line">instance(memory);     <span class="comment">// 2.初始化对象</span></span><br><span class="line">instance = memory;    <span class="comment">// 3.设置instance指向刚分配的内存地址，此时instance != null</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>步骤 2 和步骤 3 不存在依赖关系，而且无论重排前还是重排后程序的执行结果在单线程中并没有改变，因此这种优化是允许的。</p>
+</li>
+<li><p>发生重排</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">memory = allocate();  <span class="comment">// 1.分配对象空间</span></span><br><span class="line">instance = memory;    <span class="comment">// 3.设置instance指向刚分配的内存地址，此时instance != null，但对象还没有初始化完成</span></span><br><span class="line">instance(memory);     <span class="comment">// 2.初始化对象</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>所以不加 volatile 返回的实例不为空，但可能是未初始化的实例</p>
+</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
@@ -557,7 +725,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -568,7 +736,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -579,7 +747,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -634,7 +802,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-Compar-接口"><span class="nav-number">1.</span> <span class="nav-text">Java Compar**接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Comparable-是排序接口"><span class="nav-number">1.1.</span> <span class="nav-text">Comparable 是排序接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Comparator-是比较器接口"><span class="nav-number">1.2.</span> <span class="nav-text">Comparator 是比较器接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二者比较"><span class="nav-number">1.3.</span> <span class="nav-text">二者比较</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java修饰符"><span class="nav-number">2.</span> <span class="nav-text">Java修饰符</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-Compar-接口"><span class="nav-number">1.</span> <span class="nav-text">Java Compar**接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Comparable-是排序接口"><span class="nav-number">1.1.</span> <span class="nav-text">Comparable 是排序接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Comparator-是比较器接口"><span class="nav-number">1.2.</span> <span class="nav-text">Comparator 是比较器接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二者比较"><span class="nav-number">1.3.</span> <span class="nav-text">二者比较</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java修饰符"><span class="nav-number">2.</span> <span class="nav-text">Java修饰符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SpringBoot与SSM"><span class="nav-number">3.</span> <span class="nav-text">SpringBoot与SSM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java内存模型"><span class="nav-number">4.</span> <span class="nav-text">Java内存模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#并发编程需要解决的问题"><span class="nav-number">4.1.</span> <span class="nav-text">并发编程需要解决的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内存模型概念"><span class="nav-number">4.2.</span> <span class="nav-text">内存模型概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#JMM简介"><span class="nav-number">4.2.1.</span> <span class="nav-text">JMM简介</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#并发关键字"><span class="nav-number">5.</span> <span class="nav-text">并发关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#volatile"><span class="nav-number">5.1.</span> <span class="nav-text">volatile</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#三大特性"><span class="nav-number">5.1.1.</span> <span class="nav-text">三大特性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#禁止指令排序"><span class="nav-number">5.1.2.</span> <span class="nav-text">禁止指令排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线程安全性保证"><span class="nav-number">5.1.3.</span> <span class="nav-text">线程安全性保证</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#你在哪些地方用到过-volatile"><span class="nav-number">5.2.</span> <span class="nav-text">你在哪些地方用到过 volatile</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#单例"><span class="nav-number">5.2.1.</span> <span class="nav-text">单例</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
