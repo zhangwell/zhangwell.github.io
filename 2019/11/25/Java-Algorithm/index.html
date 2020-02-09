@@ -113,8 +113,11 @@
 <meta property="og:site_name" content="Well">
 <meta property="og:description" content="引言：  关于Java算法与数据结构的汇总栏">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-27T01:28:57.138Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;Java-Algorithm&#x2F;image-20200126180854114.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;Java-Algorithm&#x2F;image-20200126180950399.png">
+<meta property="og:updated_time" content="2020-01-26T10:14:15.649Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;Java-Algorithm&#x2F;image-20200126180854114.png">
 
 
 
@@ -444,6 +447,11 @@
 </ul>
 </li>
 </ul>
+<h2 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> playwithalgorithm.a_array;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: 二分查找要点：定义好循环不变量，维护循环不变量保持不变</span></span><br><span class="line"><span class="comment"> * 即这里的在[0, array.length]区间中寻找 target</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span>: zw</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@createDate</span>: 2020/1/23</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span>: 1.0.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BinarySearch</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(<span class="keyword">int</span>[] array, <span class="keyword">int</span> target)</span></span>&#123;</span><br><span class="line">        <span class="comment">// 1.定义查找区间，首先定义为闭区间[l,...,r]内寻找target</span></span><br><span class="line">        <span class="keyword">int</span> l = <span class="number">0</span>, r = array.length - <span class="number">1</span>;</span><br><span class="line">        <span class="comment">// 2.从循环中不断取值判断，这里的判断条件是用 &lt; 还是 &lt;=</span></span><br><span class="line">        <span class="comment">//   当等于时，[l,...,r]仍是有效区间，可从中取值的，故应当为 &lt;=</span></span><br><span class="line">        <span class="keyword">while</span>(l &lt;= r)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid = l + (r - l) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(array[mid] == target)</span><br><span class="line">                <span class="keyword">return</span> mid;</span><br><span class="line">            <span class="keyword">if</span>(target &gt; array[mid])</span><br><span class="line">                <span class="comment">// 3.这里更新左边界时，mid or mid+1，</span></span><br><span class="line">                <span class="comment">//   注意我们初始定义就是闭区间[...]中寻找，我们已经知道mid不为目标值时就不必加入考虑</span></span><br><span class="line">                l = mid + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                r = mid - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">binarySearch_v</span><span class="params">(<span class="keyword">int</span>[] array, <span class="keyword">int</span> target)</span></span>&#123;</span><br><span class="line">        <span class="comment">// 1.开区间[l,...,r) 内寻找target</span></span><br><span class="line">        <span class="keyword">int</span> l = <span class="number">0</span>, r = array.length;</span><br><span class="line">        <span class="comment">// 2.从循环中不断取值判断，这里的判断条件是用 &lt; 还是 &lt;=</span></span><br><span class="line">        <span class="comment">//   当等于时，[l,...,r)不是有效区间，故应当为 &lt;</span></span><br><span class="line">        <span class="keyword">while</span>(l &lt; r)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid = l + (r - l) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(array[mid] == target)</span><br><span class="line">                <span class="keyword">return</span> mid;</span><br><span class="line">            <span class="keyword">if</span>(target &gt; array[mid])</span><br><span class="line">                <span class="comment">// 3.这里更新左边界时，mid or mid+1，</span></span><br><span class="line">                <span class="comment">//   注意从半开区间[...)中寻找，我们已经知道mid不为目标值时就不必加入考虑</span></span><br><span class="line">                l = mid + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="comment">// 4.注意这里的半开区间[l,...mid)中寻找，mid-1这个值不能漏掉</span></span><br><span class="line">                r = mid;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="三路快排"><a href="#三路快排" class="headerlink" title="三路快排"></a>三路快排</h2><p><img src="/2019/11/25/Java-Algorithm/image-20200126180854114.png" alt="image-20200126180854114"></p>
+<p><img src="/2019/11/25/Java-Algorithm/image-20200126180950399.png" alt="image-20200126180950399"></p>
+<p>三个索引需要设置：zero、i、two，索引 i 的值 e 为1时直接加加，为1，或2时和索引zero、two加减1后交换即可~</p>
 
       
     </div>
@@ -538,8 +546,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -558,7 +575,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -580,7 +597,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -626,6 +643,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#二分查找"><span class="nav-number">1.</span> <span class="nav-text">二分查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三路快排"><span class="nav-number">2.</span> <span class="nav-text">三路快排</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -639,7 +672,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
