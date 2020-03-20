@@ -108,20 +108,20 @@
 <meta name="description" content="引言：  针对面试中redis问答形式的总结   数据库与redis数据一致性问题">
 <meta name="keywords" content="redis">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Redis">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;Redis&#x2F;index.html">
+<meta property="og:title" content="Redis Notes">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;Redis-Notes&#x2F;index.html">
 <meta property="og:site_name" content="Well">
 <meta property="og:description" content="引言：  针对面试中redis问答形式的总结   数据库与redis数据一致性问题">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;Redis&#x2F;image-20191125110950740.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;Redis&#x2F;image-20191125111306113.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;Redis&#x2F;1566521057383.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;Redis&#x2F;1566521457362.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;Redis&#x2F;image-20191125135302360.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;Redis&#x2F;%E5%89%91%E6%8C%87Java%5C1566518903284.png">
-<meta property="og:updated_time" content="2019-11-26T06:54:33.563Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;Redis-Notes&#x2F;image-20191125110950740.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;Redis-Notes&#x2F;image-20191125111306113.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;Redis-Notes&#x2F;1566521057383.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;Redis-Notes&#x2F;1566521457362.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;Redis-Notes&#x2F;image-20191125135302360.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;Redis-Notes&#x2F;%E5%89%91%E6%8C%87Java%5C1566518903284.png">
+<meta property="og:updated_time" content="2020-03-20T01:54:59.127Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;Redis&#x2F;image-20191125110950740.png">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;Redis-Notes&#x2F;image-20191125110950740.png">
 
 
 
@@ -151,13 +151,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/11/25/Redis/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/11/25/Redis-Notes/"/>
 
 
 
 
 
-  <title>Redis | Well</title>
+  <title>Redis Notes | Well</title>
   
 
 
@@ -328,7 +328,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/25/Redis/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/25/Redis-Notes/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.Zhang">
@@ -345,7 +345,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Redis</h1>
+          <h1 class="post-title" itemprop="name headline">Redis Notes</h1>
         
 
         <div class="post-meta">
@@ -462,10 +462,10 @@
 <li>文件事件分派器</li>
 <li>事件处理器（连接应答处理器、命令请求处理器、命令回复处理器）</li>
 </ul>
-<p><img src="/2019/11/25/Redis/image-20191125110950740.png" alt="image-20191125110950740"></p>
+<p><img src="/2019/11/25/Redis-Notes/image-20191125110950740.png" alt="image-20191125110950740"></p>
 <p>多个 socket 可能会并发产生不同的操作，每个操作对应不同的文件事件，但是 IO 多路复用程序会监听多个 socket，会将 socket 产生的事件放入队列中排队，事件分派器每次从队列中取出一个事件，把该事件交给对应的事件处理器进行处理。</p>
 <p>来看客户端与 redis 的一次通信过程：</p>
-<p><img src="/2019/11/25/Redis/image-20191125111306113.png" alt="image-20191125111306113"></p>
+<p><img src="/2019/11/25/Redis-Notes/image-20191125111306113.png" alt="image-20191125111306113"></p>
 <ul>
 <li>客户端 socket01 向 redis 的 server socket 请求建立连接，此时 server socket 会产生一个 <code>AE_READABLE</code> 事件，IO 多路复用程序监听到 server socket 产生的事件后，将该事件压入队列中。文件事件分派器从队列中获取该事件，交给<strong>连接应答处理器</strong>。连接应答处理器会创建一个能与客户端通信的 socket01，并将该 socket01 的 <code>AE_READABLE</code> 事件与命令请求处理器关联。</li>
 <li>假设此时客户端发送了一个 <code>set key value</code> 请求，此时 redis 中的 socket01 会产生 <code>AE_READABLE</code> 事件，IO 多路复用程序将事件压入队列，此时事件分派器从队列中获取到该事件，由于前面 socket01 的 <code>AE_READABLE</code> 事件已经与命令请求处理器关联，因此事件分派器将事件交给命令请求处理器来处理。命令请求处理器读取 socket01 的 <code>key value</code> 并在自己内存中完成 <code>key value</code> 的设置。操作完成后，它会将 socket01 的 <code>AE_WRITABLE</code> 事件与令回复处理器关联。</li>
@@ -549,12 +549,12 @@
 <li>对方追问 bgsave 的原理是什么？你给出两个词汇就可以了，fork 和 cow 。fork 是指 Redis 通过创建子进程来进行 bgsave 操作。cow 指的是 copy on write ，子进程创建后，父子进程共享数据段，父进程继续提供读写服务，写脏的页面数据会逐渐和子进程分离开来。</li>
 </ul>
 <p>BGSAVE底层实现方式：</p>
-<p><img src="/2019/11/25/Redis/1566521057383.png" alt="1566521057383"></p>
+<p><img src="/2019/11/25/Redis-Notes/1566521057383.png" alt="1566521057383"></p>
 <ol>
 <li>查询子进程是否有冲突</li>
 <li>系统调用fork()函数：创建进程，实现copy-on-write（写时复制），传统方式下fork在创建子进程时会将资源全部复制给子进程，简单但是效率低。Linux环境下该进fork方式，当父进程创建子进程时，内核只为子进程创建虚拟空间，父子进程使用的是相同的物理空间，只有父子进程发生更改时，才会为子进程分配独立的物理空间</li>
 </ol>
-<p><img src="/2019/11/25/Redis/1566521457362.png" alt="1566521457362"></p>
+<p><img src="/2019/11/25/Redis-Notes/1566521457362.png" alt="1566521457362"></p>
 <p>优点在于：如果调用者没有修改资源，则不会发生复制操作，因此多个调用者只是读取操作时可以共享资源。COW调用时会维持一个为读操作请求的指针，并在读完后更新这个指针，以提升读写并发能力。因此COW也提供了数据更新过程中的原子性，提升了读写效率。当redis执行持久化时，redis会fork一个子进程，子进程将数据持久化到一个临时的RDB文件中，当完成写操作后，将原来的rdb替换掉，这样做的好处就是可以实现COW操作。</p>
 <p>持久化时，子父进程都存在，父进程继续处理客户端请求，子进程负责将内存内容写入临时文件中，由于OS的COW操作，父子进程会共享相同的物理页面，当父进程处理写请求的时候，OS会为父进程调修改的页面创建副本，而不是写共享的页面，所以子进程的地址空间内的数据是fork时刻的整个数据库的快照，子进程完成写操作时，只要替代原快照，然后退出，这样就完成一次备份操作。</p>
 <h2 id="Redis-有几种数据“过期”策略？"><a href="#Redis-有几种数据“过期”策略？" class="headerlink" title="Redis 有几种数据“过期”策略？"></a>Redis 有几种数据“过期”策略？</h2><p>Redis 的过期策略，就是指当 Redis 中缓存的 key 过期了，Redis 如何处理。</p>
@@ -575,7 +575,7 @@
 <li>allkeys-random</li>
 <li>no-enviction</li>
 </ol>
-<p><img src="/2019/11/25/Redis/image-20191125135302360.png" alt="image-20191125135302360"></p>
+<p><img src="/2019/11/25/Redis-Notes/image-20191125135302360.png" alt="image-20191125135302360"></p>
 <p>具体的 <strong>每种数据淘汰策略的定义</strong>，和 <strong>如何选择讨论策略</strong>，可见 <a href="http://blog.720ui.com/2016/redis_action_02_maxmemory_policy/" target="_blank" rel="noopener">《Redis实战（二） 内存淘汰机制》</a> 。</p>
 <p><strong>Redis LRU 算法</strong></p>
 <p>另外，Redis 的 LRU 算法，<strong>并不是一个严格的 LRU 实现</strong>。这意味着 Redis 不能选择最佳候选键来回收，也就是最久未被访问的那些键。相反，Redis 会尝试执行一个近似的 LRU 算法，通过采样一小部分键，然后在采样键中回收最适合(拥有最久未被访问时间)的那个。</p>
@@ -653,7 +653,7 @@
 <p>所以，我们可以使用 <strong>set</strong> 指令，实现分布式锁。指令如下：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> <span class="keyword">key</span> <span class="keyword">value</span> [EX <span class="keyword">seconds</span>] [PX milliseconds] [NX|XX]</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2019/11/25/Redis/%E5%89%91%E6%8C%87Java%5C1566518903284.png" alt="1566518903284"></p>
+<p><img src="/2019/11/25/Redis-Notes/%E5%89%91%E6%8C%87Java%5C1566518903284.png" alt="1566518903284"></p>
 <ul>
 <li>可以使用 <code>SET key value EX seconds NX</code> 命令，尝试获得锁。</li>
 <li>具体的实现，可以参考 <a href="https://wudashan.cn/2017/10/23/Redis-Distributed-Lock-Implement/" target="_blank" rel="noopener">《Redis 分布式锁的正确实现方式（Java版）》</a> 文章。</li>
@@ -938,8 +938,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/24/DataBase/" rel="next" title="DataBase">
-                <i class="fa fa-chevron-left"></i> DataBase
+              <a href="/2019/11/24/DataBase-Notes/" rel="next" title="DataBase Notes">
+                <i class="fa fa-chevron-left"></i> DataBase Notes
               </a>
             
           </div>
@@ -1031,7 +1031,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1042,7 +1042,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
