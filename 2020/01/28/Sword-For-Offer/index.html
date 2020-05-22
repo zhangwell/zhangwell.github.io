@@ -121,7 +121,8 @@
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;01&#x2F;28&#x2F;Sword-For-Offer&#x2F;image-20200212142801214.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;01&#x2F;28&#x2F;Sword-For-Offer&#x2F;124213_1560686577136_c13e2a3d-b01c-4a08-a69b-db2c4e821e09.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;01&#x2F;28&#x2F;Sword-For-Offer&#x2F;124213_1560686577116_dc964b86-7a08-4bde-a3d9-e6ddceb29f98.png">
-<meta property="og:updated_time" content="2020-03-20T01:54:24.268Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;01&#x2F;28&#x2F;Sword-For-Offer&#x2F;image-20200408151847430.png">
+<meta property="og:updated_time" content="2020-04-08T07:20:38.239Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;uploadfiles.nowcoder.com&#x2F;files&#x2F;20190616&#x2F;124213_1560686196023_49d2adc1-b28a-44bf-babb-d44993f4a2e3.gif">
 
@@ -518,6 +519,9 @@
 <h3 id="解题思路-3"><a href="#解题思路-3" class="headerlink" title="解题思路"></a>解题思路</h3><p>使用回溯法（backtracking）进行求解，它是一种暴力搜索方法，通过搜索所有可能的结果来求解问题。回溯法在一次搜索结束时需要进行回溯（回退），将这一次搜索过程中设置的状态进行清除，从而开始一次新的搜索过程。例如下图示例中，从 f 开始，下一步有 4 种搜索可能，如果先搜索 b，需要将 b 标记为已经使用，防止重复使用。在这一次搜索结束之后，需要将 b 的已经使用状态清除，并搜索 c。</p>
 <p><img src="/2020/01/28/Sword-For-Offer/124213_1560686577116_dc964b86-7a08-4bde-a3d9-e6ddceb29f98.png" alt="img"></p>
 <p>首先对所整个矩阵遍历，找到第一个字符，然后向上下左右查找下一个字符，由于每个字符都是相同的判断方法（先判断当前字符是否相等，再向四周查找），因此采用<strong>递归函数</strong>。由于字符查找过后不能重复进入，所以还要定义一个与字符矩阵大小相同的<strong>布尔值矩阵</strong>，进入过的格子标记为true。如果不满足的情况下，需要进行<strong>回溯</strong>，此时，要将当前位置的布尔值标记回false。（所谓的回溯无非就是对使用过的字符进行标记和处理后的去标记）</p>
+<p>刷题类别：</p>
+<p>二叉树</p>
+<p><img src="/2020/01/28/Sword-For-Offer/image-20200408151847430.png" alt="image-20200408151847430"></p>
 
       
     </div>
@@ -641,7 +645,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -652,7 +656,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -663,7 +667,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
