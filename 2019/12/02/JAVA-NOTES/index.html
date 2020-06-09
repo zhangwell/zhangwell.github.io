@@ -125,7 +125,7 @@
 <meta property="og:image" content="http:&#x2F;&#x2F;blog.cuzz.site&#x2F;2019&#x2F;04&#x2F;16&#x2F;Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B&#x2F;0e75180bf35c40e2921493d0bf6bd684_th.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;blog.cuzz.site&#x2F;2019&#x2F;04&#x2F;16&#x2F;Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B&#x2F;21ebc7e8190c4966948c4ef4424088be_th.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;02&#x2F;JAVA-NOTES&#x2F;926090-20190324114958133-488948960.png">
-<meta property="og:updated_time" content="2020-05-22T13:06:44.184Z">
+<meta property="og:updated_time" content="2020-06-07T14:08:01.925Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;02&#x2F;JAVA-NOTES&#x2F;shadow_copy2.jpg">
 
@@ -499,7 +499,7 @@
 <li>对于引用类型，<ul>
 <li>== 比较的是变量（栈）内存中存放的对象的（堆）内存地址，用来<strong>判断两个对象的地址是否相同</strong>，即是否是指相同一个对象。</li>
 <li>equals() 它的作用也是<strong>判断两个对象是否相等。</strong>但它一般有两种使用情况：<ul>
-<li>情况1，类没有覆盖equals()方法。则通过equals()比较该类的两个对象时，等价于通过==比较这两个对象。</li>
+<li>情况1，类没有覆盖equals()方法。则通过equals()比较该类的两个对象时，等价于通过 == 比较这两个对象。</li>
 <li>情况2，类覆盖了equals()方法。一般，我们都覆盖equals()方法来两个对象的内容相等；若它们的内容相等，则返回true(即，认为这两个对象相等)。用来<strong>判断两个对象的内容是否相等</strong>。</li>
 </ul>
 </li>
@@ -1200,10 +1200,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String(<span class="keyword">char</span>[] value, <span class="keyword">boolean</span> share) &#123;</span><br><span class="line">    <span class="comment">// assert share : "unshared not supported";</span></span><br><span class="line">    <span class="keyword">this</span>.value = value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>原来这个构造方法构造出来的<code>String</code>对象并没有实际复制字符串，只是把<code>value</code>指向了构造参数，这是为了节省复制元素的时间。不过这个构造器是具有包访问权限，一般情况下是不能调用的。</p>
-<ol start="4">
-<li><h2 id="Java内存模型"><a href="#Java内存模型" class="headerlink" title="Java内存模型"></a>Java内存模型</h2></li>
-</ol>
-<h3 id="并发编程需要解决的问题"><a href="#并发编程需要解决的问题" class="headerlink" title="并发编程需要解决的问题"></a>并发编程需要解决的问题</h3><blockquote>
+<h2 id="Java内存模型"><a href="#Java内存模型" class="headerlink" title="Java内存模型"></a>Java内存模型</h2><h3 id="并发编程需要解决的问题"><a href="#并发编程需要解决的问题" class="headerlink" title="并发编程需要解决的问题"></a>并发编程需要解决的问题</h3><blockquote>
 <p>线程间<strong>通信</strong>&amp;线程间<strong>同步</strong></p>
 </blockquote>
 <p>线程之间通信机制分为两种：<strong>共享内存</strong>、<strong>消息传递</strong></p>
