@@ -118,8 +118,8 @@
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;Redis-Notes&#x2F;1566521057383.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;Redis-Notes&#x2F;1566521457362.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;Redis-Notes&#x2F;image-20191125135302360.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;Redis-Notes&#x2F;%E5%89%91%E6%8C%87Java%5C1566518903284.png">
-<meta property="og:updated_time" content="2020-05-24T04:25:52.814Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;Redis-Notes&#x2F;Sword-For-java%5C1566518903284.png">
+<meta property="og:updated_time" content="2020-09-18T02:35:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;Redis-Notes&#x2F;image-20191125110950740.png">
 
@@ -653,10 +653,13 @@
 <p>所以，我们可以使用 <strong>set</strong> 指令，实现分布式锁。指令如下：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> <span class="keyword">key</span> <span class="keyword">value</span> [EX <span class="keyword">seconds</span>] [PX milliseconds] [NX|XX]</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2019/11/25/Redis-Notes/%E5%89%91%E6%8C%87Java%5C1566518903284.png" alt="1566518903284"></p>
+<p><img src="/2019/11/25/Redis-Notes/Sword-For-java%5C1566518903284.png" alt="1566518903284"></p>
 <ul>
-<li>可以使用 <code>SET key value EX seconds NX</code> 命令，尝试获得锁。</li>
+<li>可以使用 <code>SET key value EX seconds NX</code> 命令，尝试获得锁。<ul>
 <li>具体的实现，可以参考 <a href="https://wudashan.cn/2017/10/23/Redis-Distributed-Lock-Implement/" target="_blank" rel="noopener">《Redis 分布式锁的正确实现方式（Java版）》</a> 文章。</li>
+</ul>
+</li>
+<li><a href="https://www.cnblogs.com/wlwl/p/11651409.html" target="_blank" rel="noopener">增加可重入锁</a></li>
 </ul>
 <p><strong>方案二：redlock</strong></p>
 <p>set 指令的方案，适合用于在单机 Redis 节点的场景下，在多 Redis 节点的场景下，会存在分布式锁丢失的问题。所以，Redis 作者 Antirez 基于分布式环境下提出了一种更高级的分布式锁的实现方式：Redlock 。</p>
@@ -1031,7 +1034,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1053,7 +1056,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
